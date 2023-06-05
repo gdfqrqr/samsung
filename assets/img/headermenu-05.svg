@@ -1,0 +1,30 @@
+  <svg width="28px" height="28px" viewBox="0 0 28 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <title>Icon-GNB-ConsumerStorage</title>
+                                        <defs>
+                                            <polygon id="path-1" points="0 28 28 28 28 0 0 0"></polygon>
+                                        </defs>
+                                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <g id="Icon-GNB" transform="translate(-320.000000, -76.000000)">
+                                                <g id="Icon-GNB-ConsumerStorage" transform="translate(320.000000, 76.000000)">
+                                                    <rect id="Rectangle" fill="#FFFFFF" opacity="0" x="0" y="0" width="28" height="28"></rect>
+                                                    <g id="Group">
+                                                        <polygon id="Fill-1" points="0 28 28 28 28 0 0 0"></polygon>
+                                                        <polygon id="Fill-1" points="0 28 28 28 28 0 0 0"></polygon>
+                                                        <g id="icon">
+                                                            <path d="M23.8625,17.9649 L14.7965,17.9649 C14.5415,17.9649 14.3355,18.1559 14.3355,18.3919 L14.3355,22.6509 L14.3225,22.6509 L14.3225,24.5379 C14.3225,24.7739 14.5285,24.9649 14.7825,24.9649 L16.9715,24.9649 C17.1465,24.9649 17.3155,24.9069 17.4475,24.8019 L18.2875,24.1359 L18.9135,24.1359 L18.9135,24.8059 C18.9135,24.8939 18.9905,24.9649 19.0845,24.9649 L20.1555,24.9649 L21.0465,24.1359 L23.8625,24.1359 C24.1165,24.1359 24.3225,23.9449 24.3225,23.7099 L24.3225,18.3919 C24.3225,18.1559 24.1165,17.9649 23.8625,17.9649 Z" id="Stroke-2" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                            <path d="M20.368,18.0833 L20.368,13.7763 L19.43,13.7763 L19.43,8.1463 L20.368,8.1463 L20.368,4.3573 C20.368,3.8583 19.964,3.4543 19.466,3.4543 L8.771,3.4543 C8.531,3.4543 8.302,3.5493 8.133,3.7193 L5.619,6.2333 C5.449,6.4023 5.354,6.6323 5.354,6.8713 L5.354,9.0843 L6.5,9.0843 L6.5,10.9613 L5.354,10.9613 L5.354,15.5003 L5.354,21.9813 C5.354,22.6323 5.882,23.1603 6.533,23.1603 L14.187,23.1603" id="Stroke-4" stroke="#FFFFFF"></path>
+                                                            <mask id="mask-2" fill="white">
+                                                                <use xlink:href="#path-1"></use>
+                                                            </mask>
+                                                            <g id="Clip-7"></g>
+                                                            <polygon id="Fill-6" fill="#FFFFFF" mask="url(#mask-2)" points="19.511 10.737 20.449 10.737 20.449 7.922 19.511 7.922"></polygon>
+                                                            <line x1="8.5" y1="6.5" x2="8.5" y2="9.5" id="Stroke-8" stroke="#FFFFFF" stroke-width="0.75" mask="url(#mask-2)"></line>
+                                                            <line x1="11.5" y1="6.5" x2="11.5" y2="9.5" id="Stroke-9" stroke="#FFFFFF" stroke-width="0.75" mask="url(#mask-2)"></line>
+                                                            <line x1="14.5" y1="6.5" x2="14.5" y2="9.5" id="Stroke-10" stroke="#FFFFFF" stroke-width="0.75" mask="url(#mask-2)"></line>
+                                                            <line x1="17.5" y1="6.5" x2="17.5" y2="9.5" id="Stroke-11" stroke="#FFFFFF" stroke-width="0.75" mask="url(#mask-2)"></line>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>

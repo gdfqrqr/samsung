@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="28px" height="28px" viewBox="0 0 28 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Icon-GNB-Security Solution</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icon-GNB" transform="translate(-247.000000, -152.000000)">
+            <g id="Icon-GNB-Security-Solution" transform="translate(247.000000, 152.000000)">
+                <rect id="Rectangle" fill="#FFFFFF" opacity="0" x="0" y="0" width="28" height="28"></rect>
+                <g id="Group">
+                    <polygon id="Fill-1" points="0 28 28 28 28 0 0 0"></polygon>
+                    <polyline id="Stroke-2" stroke="#FFFFFF" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" points="14 11.8834 14 20.7084 14 23.2554"></polyline>
+                    <g id="Group-15" transform="translate(5.000000, 3.578900)">
+                        <path d="M9.9906,7.3239 C9.9906,7.8659 9.5466,8.3049 8.9996,8.3049 C8.4526,8.3049 8.0096,7.8659 8.0096,7.3239 C8.0096,6.7819 8.4526,6.3429 8.9996,6.3429 C9.5466,6.3429 9.9906,6.7819 9.9906,7.3239 Z" id="Stroke-3" stroke="#FFFFFF" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M14.5049,8.3045 C14.5049,8.8465 14.0609,9.2855 13.5139,9.2855 C12.9669,9.2855 12.5239,8.8465 12.5239,8.3045 C12.5239,7.7625 12.9669,7.3235 13.5139,7.3235 C14.0609,7.3235 14.5049,7.7625 14.5049,8.3045 Z" id="Stroke-5" stroke="#FFFFFF" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <polyline id="Stroke-7" stroke="#FFFFFF" stroke-width="0.75" points="13.5143 9.2851 13.5143 11.2461 11.9023 12.3151 11.9023 18.9641"></polyline>
+                        <path d="M5.4763,8.3045 C5.4763,8.8465 5.0323,9.2855 4.4853,9.2855 C3.9383,9.2855 3.4953,8.8465 3.4953,8.3045 C3.4953,7.7625 3.9383,7.3235 4.4853,7.3235 C5.0323,7.3235 5.4763,7.7625 5.4763,8.3045 Z" id="Stroke-9" stroke="#FFFFFF" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <polyline id="Stroke-11" stroke="#FFFFFF" stroke-width="0.75" points="4.4857 9.2851 4.4857 11.2461 6.0977 12.3151 6.0977 18.9641"></polyline>
+                        <path d="M9,0 C8.862,0 8.725,0.021 8.592,0.064 L1.013,2.489 C0.412,2.681 0,3.272 0,3.941 L0,8.573 C0,14.984 3.64,17.9 8.316,20.655 C8.528,20.78 8.764,20.842 9,20.842 C9.236,20.842 9.472,20.78 9.684,20.655 C14.36,17.9 18,14.984 18,8.573 L18,3.941 C18,3.272 17.588,2.681 16.987,2.489 L9.408,0.064 C9.275,0.021 9.138,0 9,0 M9,1 C9.035,1 9.07,1.006 9.104,1.016 L16.683,3.442 C16.869,3.501 17,3.707 17,3.941 L17,8.573 C17,14.13 14.25,16.803 9.176,19.793 C9.121,19.826 9.062,19.842 9,19.842 C8.938,19.842 8.879,19.826 8.824,19.793 C3.75,16.803 1,14.13 1,8.573 L1,3.941 C1,3.707 1.131,3.501 1.317,3.442 L8.896,1.016 C8.93,1.006 8.965,1 9,1" id="Fill-13" fill="#FFFFFF"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

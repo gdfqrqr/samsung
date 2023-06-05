@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="28px" height="28px" viewBox="0 0 28 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Icon-GNB-TechBlog</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icon-GNB" transform="translate(-183.000000, -897.000000)">
+            <g id="Icon-GNB-TechBlog" transform="translate(183.000000, 897.000000)">
+                <rect id="Rectangle" fill="#FFFFFF" opacity="0" x="0" y="0" width="28" height="28"></rect>
+                <g id="Group">
+                    <polygon id="Fill-1" points="0 28 28 28 28 0 0 0"></polygon>
+                    <g id="Group-14" transform="translate(2.999500, 3.000000)">
+                        <path d="M11.9241,7.3867 L8.1881,7.3867 C7.7731,7.3867 7.4371,7.0507 7.4371,6.6357 L7.4371,4.9947 C7.4371,4.5807 7.7731,4.2447 8.1881,4.2447 L11.9241,4.2447 C12.3391,4.2447 12.6751,4.5807 12.6751,4.9947 L12.6751,6.6357 C12.6751,7.0507 12.3391,7.3867 11.9241,7.3867" id="Fill-2" fill="#FFFFFF"></path>
+                        <line x1="7.9205" y1="10.3181" x2="18.8755" y2="10.3181" id="Stroke-4" stroke="#FFFFFF" stroke-width="0.75" stroke-linecap="round"></line>
+                        <path d="M19.734,0 L6.267,0 C5.015,0 4,1.015 4,2.266 L4,6 L2.254,6 C1.009,6 0,7.009 0,8.253 L0,19.029 C0,20.67 1.331,22 2.972,22 L19.029,22 C20.67,22 22,20.67 22,19.029 L22,15.734 L22,6 L22,2.266 C22,1.015 20.986,0 19.734,0 M19.734,1 C20.432,1 21,1.568 21,2.266 L21,6 L21,15.734 L21,19.029 C21,20.116 20.116,21 19.029,21 L2.972,21 C1.885,21 1,20.116 1,19.029 L1,8.253 C1,7.562 1.563,7 2.254,7 L4,7 L5,7 L5,6 L5,2.266 C5,1.568 5.569,1 6.267,1 L19.734,1" id="Fill-6" fill="#FFFFFF"></path>
+                        <path d="M4.5163,3.0543 L4.5163,16.0543 C4.5163,16.0543 4.5163,18.0543 3.5163,18.0543" id="Stroke-8" stroke="#FFFFFF" stroke-linecap="round"></path>
+                        <line x1="7.9205" y1="13.8203" x2="18.8755" y2="13.8203" id="Stroke-10" stroke="#FFFFFF" stroke-width="0.75" stroke-linecap="round"></line>
+                        <line x1="7.9205" y1="17.3226" x2="18.8755" y2="17.3226" id="Stroke-12" stroke="#FFFFFF" stroke-width="0.75" stroke-linecap="round"></line>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="28px" height="28px" viewBox="0 0 28 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Icon-GNB-News</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icon-GNB" transform="translate(-45.000000, -894.000000)">
+            <g id="Icon-GNB-News" transform="translate(45.000000, 894.000000)">
+                <rect id="Rectangle" fill="#FFFFFF" opacity="0" x="0" y="0" width="28" height="28"></rect>
+                <g id="Group">
+                    <polygon id="Fill-1" points="0 28 28 28 28 0 0 0"></polygon>
+                    <g id="Group-12" transform="translate(2.795900, 5.945100)">
+                        <path d="M14.153,0 C14.081,0 14.008,0.011 13.936,0.033 L0.574,4.165 C0.235,4.27 0,4.611 0,4.999 L0,8.187 C0,8.575 0.235,8.916 0.574,9.021 L13.98,13.166 C14.052,13.189 14.125,13.199 14.197,13.199 C14.483,13.199 14.753,13.029 14.891,12.737 C15.319,11.836 16,9.894 16,6.659 C16,3.647 15.285,1.501 14.86,0.492 C14.73,0.183 14.45,0 14.153,0 M14.011,1.057 C14.411,2.059 15,3.991 15,6.659 C15,9.526 14.444,11.28 14.062,12.145 L1,8.106 L1,5.08 L14.011,1.057" id="Fill-2" fill="#FFFFFF"></path>
+                        <path d="M3.0697,8.744 L3.0697,16.195 C3.0697,16.64 3.3977,17 3.8017,17 L5.6127,17 C5.9277,17 6.2067,16.779 6.3067,16.451 L8.2147,10.332 L3.0697,8.744 Z M4.0697,10.099 L6.9617,10.992 L5.3997,16 L4.0697,16 L4.0697,10.099 L4.0697,10.099 Z" id="Fill-4" fill="#FFFFFF"></path>
+                        <line x1="18.3108" y1="6.8911" x2="21.8108" y2="6.8911" id="Stroke-6" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round"></line>
+                        <line x1="18.3108" y1="2.7163" x2="21.3418" y2="0.9663" id="Stroke-8" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round"></line>
+                        <line x1="18.3108" y1="11.0658" x2="21.3418" y2="12.8158" id="Stroke-10" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round"></line>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,184 @@
+.header {
+    position: relative;
+    width: 100%;
+    height: 60px;
+    background: #000;
+    border-bottom: 1px solid #333;
+
+    .header-inner {
+        max-width: 1440px;
+        height: 100%;
+        padding: 0 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .gnb-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex: 1;
+        height: 100%;
+        margin: 0 3.125vw;
+    }
+
+    .gnb-wrap {
+        height: 100%;
+
+        .gnb-list {
+            display: flex;
+            height: 100%;
+        }
+
+        .gnb-item {
+            // position: relative;
+            padding: 0 12px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+
+            .link-hover{
+                position: relative;
+                display: flex;
+                align-items: center;
+                height: 100%;
+            }
+
+            .link-hover::after{
+                content: '';
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                transform: translateX(-50%);
+                height: 2px;
+                width: 0;
+                background: #fff;
+                transition: width 0.2s;
+            }
+
+            .link-hover:hover::after {
+              width: 100%;
+            }
+
+            a {
+                color: #fff;
+                font-size: 14px;
+                font-weight: 700;
+            }
+
+        
+        }
+    }
+
+    .sub-inner {
+        display: none;
+        width: 100%;
+        position: absolute;
+        top: calc(100% + 1px);
+        left: 0;
+        background-color: #000;
+        z-index: 2;
+        justify-content: center;
+
+        &.on {
+            display: flex;
+        }
+
+        .sub-wrap {
+            padding: 50px 24px 44px 24px;
+            max-width: 1214px;
+
+            .sub-list {
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+                gap: 32px;
+            }
+
+            .sub-item {
+                position: relative;
+                padding-left: 36px;
+
+                a {
+                    >img {
+                        position: absolute;
+                        top: -8px;
+                        left: 0;
+                        width: 28px;
+                        height: 28px;
+                    }
+                }
+
+                span {
+                    display: flex;
+                    align-items: center;
+
+                    img {
+                        width: 12px;
+                        height: 12px;
+                        margin-left: 5px;
+                    }
+                }
+            }
+        }
+    }
+
+    .depth3-wrap {
+        margin-top: 10px;
+
+        .depth3-item {
+            a {
+                font-size: 1.4rem;
+                margin-bottom: 6px;
+                text-align: left;
+                line-height: 1.43;
+                display: block;
+                color: #757575;
+                font-weight: normal;
+            }
+
+            &.depth1 {
+                position: relative;
+                margin-top: 32px;
+
+                a {
+                    font-weight: 700;
+                    font-size: 1.6rem;
+                    color: #fff;
+
+                    >img {
+                        left: -36px;
+                        top: -4px;
+                    }
+                }
+            }
+        }
+    }
+
+    .utils-wrap {
+        display: flex;
+
+        .btn-search {
+            img {
+                width: 20px;
+                height: 20px;
+            }
+        }
+
+        .btn-lang {
+            display: flex;
+            align-items: center;
+            margin-left: 13px;
+
+            img {
+                width: 18px;
+                height: 18px;
+            }
+
+            span {
+                margin-left: 6px;
+                color: #fff;
+            }
+        }
+    }
+}
