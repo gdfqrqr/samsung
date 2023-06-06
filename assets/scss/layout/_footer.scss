@@ -1,0 +1,84 @@
+.footer{
+    padding: 0 24px 48px;
+    .grid-inner{
+        border-top: 1px solid #eee;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+    }
+    .quick-wrap{
+        margin-left: 24px;
+        margin-top: 55px;
+        .title-box{
+            font-size: 1.4rem;
+            line-height: 1.43;
+            font-weight: 700;
+            color: #555555;
+            margin-bottom: 8px;
+        }
+        .quick-item{
+            font-size: 1.2rem;
+            line-height: 1.33;
+            color: #555555;
+            margin-bottom: 4px;
+        }
+    }
+
+    .btm-wrap{
+        padding-top: 12px;
+        margin-top: 32px;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: space-between;
+
+        .left-wrap{
+            display: flex;
+            align-items: center;
+            .privacy-list{
+                display: flex;
+                margin-left: 60px;
+                gap: 28px;
+            }
+            .privacy-item{
+                font-size: 10px;
+                font-weight: 700;
+                line-height: 1.3;
+                color: #555;
+            }
+            address{
+                font-size: 10px;
+                line-height: 1.3;
+            }
+        }
+        .right-wrap{
+            .channel-list{
+                display: flex;
+                align-items: center;
+                &+.channel-list{
+                    margin-top: 12px;
+                }
+                .title{
+                    width: 54px;
+                    font-size: 1rem;
+                    line-height: 1.3;
+                    font-weight: 700;
+                    color: #555555;
+                    margin-right: 12px;
+                }
+            }
+            .channel-item{
+                &+.channel-item{
+                    margin-left: 12px;
+                }
+                img{
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+            strong{    
+                margin-left: 20px;
+                width: 44px;
+                height: 32px;
+            }
+        }
+    }
+}

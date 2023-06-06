@@ -1,2 +1,26 @@
 .blind { position: absolute; clip: rect(0 0 0 0); width: 1px; height: 1px; margin: -1px; overflow: hidden; } 
  
+.fixed-wrap{
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 10;
+    
+    &.active{
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 48px;
+        height: 48px;
+        border-radius: 48px;
+        box-shadow: 3px 3px 11px 1px rgba(0, 0, 0, 0.12);
+        background: #fff;
+    }
+}
