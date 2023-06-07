@@ -34,7 +34,14 @@
         .hidden {
             display: none
         }
+        .btn{
 
+            @include tablet{
+                display: none;
+            }
+
+        
+        }
         .btn-prev {
             left: 24px;
         }
@@ -56,6 +63,20 @@
             color: rgba(255, 255, 255, 0.6);
             opacity: 1;
             margin-right: 16px;
+
+            @include tablet{
+                padding: 0 0 4px;
+                width: 91px;
+                font-size: 10px;
+                line-height: 13px;
+                margin-right: 8px;
+                // max-height: 29px;
+            }
+        
+            @include mobile{ 
+        
+            }
+        
 
             span {
                 width: 0;
@@ -95,6 +116,14 @@
     .swiper-slide {
         height: 810px;
 
+        @include tablet{
+            height: 540px;
+        }
+    
+        @include mobile{ 
+            height: 540px;
+        }
+    
         video {
             position: absolute;
             top: 0;
@@ -122,6 +151,18 @@
             font-size: 7.2rem;
             font-weight: 700;
             line-height: 8.7rem;
+
+            @include tablet{
+                margin-bottom: 16px;
+                font-size: 4.8rem;
+                line-height: 5.8rem;
+            }
+        
+            @include mobile{ 
+                margin-bottom: 12px;
+                font-size: 3.2rem;
+                line-height: 4.0rem;
+            }
         }
 
         .sub-title {
@@ -130,15 +171,41 @@
             font-weight: 700;
             line-height: 2.4rem;
             margin-bottom: 24px;
+
+            @include tablet{
+                margin-bottom: 16px;
+                font-size: 1.5rem;
+                line-height: 2.0rem;
+            }
+        
+            @include mobile{ 
+                margin-bottom: 4px;
+                font-size: 1.6rem;
+                line-height: 2.2rem;
+            }
+        
         }
 
-        img {
+        figure{
+            height: 810px;
+            max-width: 100%;
+            object-fit: cover;
             position: absolute;
             top: 0;
-            left: 0;
             width: 100%;
-            height: 100%;
-            object-fit: cover;
+
+            @include tablet{
+                height: 540px;
+            }
+        
+            @include mobile{ 
+                height: 540px;
+            }
+        
+            picture{
+                width: 100%;
+                height: 100%;
+            }
         }
 
         &-active {
@@ -154,6 +221,15 @@
     justify-content: center;
     align-items: center;
     gap: 16px;
+
+    @include tablet{
+        margin-top: 12px;
+    }
+
+    @include mobile{ 
+
+    }
+
 
     .link-more {
         font-size: 14px;

@@ -5,6 +5,16 @@
     background: #000;
     border-bottom: 1px solid #333;
 
+    @include tablet{
+        
+    }
+
+    @include mobile{ 
+
+    }
+
+
+
     .header-inner {
         max-width: 1440px;
         height: 100%;
@@ -15,6 +25,15 @@
         margin: 0 auto;
     }
 
+    .logo{
+
+        @include tablet{
+            width: 78px;
+            height: 12px;
+        }
+   
+    }
+
     .gnb-container {
         display: flex;
         align-items: center;
@@ -22,14 +41,29 @@
         flex: 1;
         height: 100%;
         margin: 0 3.125vw;
+
+        @include tablet{
+            justify-content: center;
+            margin: 0;
+            padding: 0 8px;
+        }
+
     }
 
     .gnb-wrap {
         height: 100%;
 
+        @include tablet{
+            margin-right: 15px;
+            &:last-of-type{
+                margin-right: 0;
+            }
+        }
+
         .gnb-list {
             display: flex;
             height: 100%;
+            
         }
 
         .gnb-item {
@@ -38,6 +72,19 @@
             display: flex;
             align-items: center;
 
+            @include tablet{
+                padding: 0;
+                margin-right: 15px;
+
+                &:last-of-type{
+                    margin-right: 0;
+                }
+            }
+        
+            @include mobile{ 
+        
+            }
+        
             .link-hover{
                 position: relative;
                 display: flex;
@@ -66,6 +113,17 @@
                 color: #fff;
                 font-size: 14px;
                 font-weight: 700;
+
+                @include tablet{
+                    padding: 0;
+                    margin-left: 0;
+                    margin-right: 0;
+                    font-size: 1.2rem;
+                }
+            
+                @include mobile{ 
+            
+                }
             }
 
         
@@ -224,6 +282,10 @@
             img {
                 width: 20px;
                 height: 20px;
+                @include tablet{
+                    height: 16px;
+                    width: 16px;
+                }
             }
         }
 
@@ -235,11 +297,19 @@
             img {
                 width: 18px;
                 height: 18px;
+
+                @include tablet{
+                    height: 16px;
+                    width: 16px;
+                }
             }
 
             span {
                 margin-left: 6px;
                 color: #fff;
+                @include tablet{
+                    font-size: 10px;
+                }
             }
         }
     }

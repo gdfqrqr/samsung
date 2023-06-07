@@ -509,7 +509,14 @@
             <div class="swiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <img src="./assets/img/mainslide-01.avif" alt="">
+                        <figure>
+                            <picture>
+                                <source media="(min-width: 1024px)"  srcset="./assets/img/mainslide-01.avif">
+                                <source media="(min-width: 768px) and (max-width: 1023px)"  srcset="./assets/img/mainslide-01-ta.webp">
+                                <source media="(min-width: 0px) and (max-width: 767px)"  srcset="./assets/img/mainslide-01-mo.jpeg">
+                                <img src="./assets/img/mainslide-01.avif" alt="">
+                            </picture>    
+                        </figure>
                         <div class="text-wrap">
                             <h3 class="title">Samsung Foundry Forum &amp; SAFE™ Forum 2023</h3>
                             <span class="sub-title">
@@ -523,7 +530,14 @@
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <img src="./assets/img/mainslide-02.avif" alt="">
+                        <figure>
+                            <picture>
+                                <source media="(min-width: 1024px)"  srcset="./assets/img/mainslide-02.avif">
+                                <source media="(min-width: 768px) and (max-width: 1023px)"  srcset="./assets/img/mainslide-02-ta.webp">
+                                <source media="(min-width: 0px) and (max-width: 767px)"  srcset="./assets/img/mainslide-02-mo.avif">
+                                <img src="./assets/img/mainslide-02.avif" alt="">
+                            </picture>    
+                        </figure>
                         <div class="text-wrap">
                             <h3 class="title">삼성전자 자회사형 <br>장애인 표준사업장 희망별숲</h3>
                             <span class="sub-title">
@@ -535,9 +549,16 @@
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <img src="./assets/img/mainslide-03.avif" alt="">
+                        <figure>
+                            <picture>
+                                <source media="(min-width: 1024px)"  srcset="./assets/img/mainslide-03.avif">
+                                <source media="(min-width: 768px) and (max-width: 1023px)"  srcset="./assets/img/mainslide-03-ta.avif">
+                                <source media="(min-width: 0px) and (max-width: 767px)"  srcset="./assets/img/mainslide-03-mo.avif">
+                                <img src="./assets/img/mainslide-03.avif" alt="">
+                            </picture>    
+                        </figure>
                         <div class="text-wrap">
-                            <h3 class="title">당신의 특별한 순간을 특별한 스크린으로</h3>
+                            <h3 class="title">당신의 특별한 순간을 특별한 <br>스크린으로</h3>
                             <span class="sub-title">
                                2억화소 아이소셀 이미지센서와 포토부스의 만남
                             </span>
@@ -546,8 +567,16 @@
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-slide">
-                        <img src="./assets/img/mainslide-04.avif" alt="">
+                    <div class="swiper-slide">      
+                        <figure>
+                            <picture>
+                                <source media="(min-width: 1024px)"  srcset="./assets/img/mainslide-04.avif">
+                                <source media="(min-width: 768px) and (max-width: 1023px)"  srcset="./assets/img/mainslide-04-ta.avif">
+                                <source media="(min-width: 0px) and (max-width: 767px)"  srcset="./assets/img/mainslide-04-mo.avif">
+                                <img src="./assets/img/mainslide-04.avif" alt="">
+                            </picture>    
+                        </figure>
+
                         <div class="text-wrap">
                             <h3 class="title">Imagination brought to life</h3>
                             <span class="sub-title">
@@ -559,9 +588,15 @@
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <video autoplay muted loop>
-                            <source src="./assets/img/mainslide-05.webm" type="video/webm">
-                        </video>
+                        <figure>
+                            <picture>
+                                <source muted autoplay  media="(min-width: 1024px)"  srcset="./assets/img/mainslide-05.webm">
+                                <source muted autoplay  media="(min-width: 768px) and (max-width: 1023px)"  srcset="./assets/img/mainslide-05.webm">
+                                <source media="(min-width: 0px) and (max-width: 767px)"  srcset="./assets/img/mainslide-05-mo.avif">
+                                <img src="./assets/img/mainslide-05-mo.avif" alt="">
+                                <video muted autoplay src="./assets/img/mainslide-05.webm"></video>
+                            </picture>    
+                        </figure>
                         <div class="text-wrap">
                             <span class="sub-title">
                                 PIM
@@ -960,14 +995,14 @@
     </main>
     <footer class="footer">
         <div class="grid-inner">
-            <div class="quick-wrap">
+            <!--<div class="quick-wrap">
                 <h3 class="title-box">제품</h3>
                 <ul class="quick-list">
-                    <!-- <li class="quick-item"><a href="">DRAM</a></li>
+                     <li class="quick-item"><a href="">DRAM</a></li>
                     <li class="quick-item"><a href="">DRAM</a></li>
-                    <li class="quick-item"><a href="">DRAM</a></li> -->
+                    <li class="quick-item"><a href="">DRAM</a></li>
                 </ul>
-            </div>
+            </div> -->
         </div>
         <div class="btm-wrap">
             <div class="left-wrap">
