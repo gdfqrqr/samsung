@@ -12,14 +12,14 @@ $(function(){
             clickable: true,
             renderBullet: 
                 function (index, className) {
-                    return '<div class="' + className + '">' + (menu[index])+ '<span></span>' + '</div>' ;
+                    return '<div class="' + className + '">' + '<p>' + (menu[index]) + '<span></span>' +'</p>' + '</div>' ;
                 },
         },
         loop: true,
-        autoplay: {
-            delay: 5000,
-            disableOnInteraction: false
-        },
+        // autoplay: {
+        //     delay: 5000,
+        //     disableOnInteraction: false
+        // },
         
     });
 
@@ -61,7 +61,7 @@ $(function(){
     });
 
 
-    // main silde3
+    // main silde3 - 인사이트
     var tab = ['초고화소 이미지센서', '초미세 픽셀 기술', '게이밍 스토리지', '오토모티브', '인공지능', 'EUV']
     var swiper3 = new Swiper(".sc-insight .swiper", {
         effect : 'fade',
@@ -75,6 +75,20 @@ $(function(){
         },
         touchRatio:0,
         loop: true,
+        slidesPerView:1.5,
+        spaceBetween: 16,
+        breakpoints: {
+        
+            767: {
+              slidesPerView: 1.5,  //브라우저가 768보다 클 때
+                  spaceBetween: 16,
+            },
+
+            1024: {
+              slidesPerView: 1,  //브라우저가 1024보다 클 때
+                  spaceBetween: 16,
+            },
+          },
     });
 
     //aos
