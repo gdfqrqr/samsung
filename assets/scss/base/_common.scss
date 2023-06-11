@@ -1,3 +1,16 @@
+body{
+    overflow-x: hidden;
+}
+
+@include tablet{
+    .hidden{
+        overflow: hidden;
+    }
+}
+
+.hidden2{
+    overflow: hidden;
+}
 .blind { position: absolute; clip: rect(0 0 0 0); width: 1px; height: 1px; margin: -1px; overflow: hidden; } 
  
 .fixed-wrap{
