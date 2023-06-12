@@ -8,28 +8,41 @@ window.onload = function () {
 
 $(function () {
 
+
+
+
+
     // 메인비주얼
     var menu = ['SFF & SAFE™ Forum 2023', '희망별숲', '아이소셀 포토부스', '비전', 'PIM']
-    var swiper1 = new Swiper(".sc-visual .swiper", {
-        effect: 'fade',
-        navigation: {
-            nextEl: ".sc-visual .btn-next",
-            prevEl: ".sc-visual .btn-prev",
-        },
-        pagination: {
-            el: ".sc-visual .pagination",
-            clickable: true,
-            renderBullet: function (index, className) {
-                return '<div class="' + className + '">' + '<p>' + (menu[index]) + '<span></span>' + '</p>' + '</div>';
-            },
-        },
-        loop: true,
-        autoplay: {
-            delay: 5000,
-            disableOnInteraction: false
-        },
+    
 
-    });
+    a2 = function (index, className) { //작동되게
+        return '<div class="' + className + '">' + '<p>' + (menu[index]) + '<span></span>' +'</p>' + '</div>' ;
+    }
+    a3 = function (index, className) { //작동안되게
+        return '<div class="' + className + '"></div>' ;
+    }
+
+    function initSwiper3(bullet){
+        return swiper1 = new Swiper(".sc-visual .swiper", {
+            effect: 'fade',
+            navigation: {
+                nextEl: ".sc-visual .btn-next",
+                prevEl: ".sc-visual .btn-prev",
+            },
+            pagination: {
+                el: ".sc-visual .pagination",
+                clickable: true,
+                renderBullet: bullet
+            },
+            loop: true,
+            // autoplay: {
+            //     delay: 5000,
+            //     disableOnInteraction: false
+            // },
+
+        });
+    }
 
     // 정지재생버튼
     $(".autoplay.pause").click(function () {
@@ -106,23 +119,6 @@ $(function () {
     })
 
 
-    //main silde2 -> sc-info
-    var swiper2 = new Swiper(".sc-info .swiper", {
-        spaceBetween: 88,
-        centeredSlides: true,
-        slidesPerView: 'auto',
-        navigation: {
-            nextEl: ".sc-info .btn-next",
-            prevEl: ".sc-info .btn-prev",
-        },
-        pagination: {
-            el: ".sc-info .pagination",
-            clickable: true,
-        },
-        loop: true,
-    });
-
-
     // main silde3 -> sc-insight
     var tab = ['초고화소 이미지센서', '초미세 픽셀 기술', '게이밍 스토리지', '오토모티브', '인공지능', 'EUV']
 
@@ -139,6 +135,7 @@ $(function () {
         return swiper = new Swiper(".sc-insight .swiper", {
             effect: effect,
             slidesPerView: view,
+            centeredSlides: true,
             spaceBetween: space,
             pagination: {
                 el: ".sc-insight .tab-list",
@@ -153,8 +150,24 @@ $(function () {
 
     }
 
-    function initSwiper2(effect, space) {
+    function initSwiper2(num,between) {
         if (typeof (mainswiper) == 'object') mainswiper.destroy(); // 기존 스와이퍼 죽이고 재실행 
+
+        //main silde2 -> sc-info
+        return swiper2 = new Swiper(".sc-info .swiper", {
+            spaceBetween: between,
+            centeredSlides: true,
+            slidesPerView: num,
+            navigation: {
+                nextEl: ".sc-info .btn-next",
+                prevEl: ".sc-info .btn-prev",
+            },
+            pagination: {
+                el: ".sc-info .pagination",
+                clickable: true,
+            },
+            loop: true,
+        });
     }
 
 
@@ -162,11 +175,13 @@ $(function () {
         if (width >= 1024) {
             // 슬라이드 효과
             initSwiper('fade', 0, 'auto');
-            initSwiper2()
+            initSwiper2('auto', 88)
+            initSwiper3(a2)
         } else if (width < 1024) {
             // 페이드 효과
-            initSwiper('slide', 16, 1.1);
-            initSwiper2()
+            initSwiper('slide', 16, 1.03);
+            initSwiper2(1, 24)
+            initSwiper3(a3)
         }
 
     }
