@@ -332,7 +332,8 @@
         position: relative;
         box-sizing: content-box;
         padding: 0 32px;
-        @include mobile{
+
+        @include tablet{
             padding: 0 24px;
         }
 
@@ -808,6 +809,7 @@
             height: 100%;
             @include mobile{
                 justify-content: center;
+                margin-bottom: 40px;
             }
         }
 
@@ -959,21 +961,32 @@
             }
             @include mobile{
                 width: 100%;
+                padding: 0 16px;
+                margin-bottom: 48px;
             }
 
         }
 
-        .news-item {
-            margin-bottom: 64px;
-            padding: 0 32px;
+        // .news-item {
+        //     margin-bottom: 64px;
+        //     padding: 0 32px;
 
-        }
+        // }
 
         .img-wrap {
             position: relative;
             border-radius: 20px;
             margin: 0 -32px 24px -32px;
             overflow: hidden;
+            @include tablet{
+                margin: 0 -28px 24px;
+            }
+            @include mobile{
+                margin: 0 -16px 18px;
+            }
+            img{
+                width: 100%;
+            }
         }
 
         .text-wrap {
@@ -999,7 +1012,6 @@
                 display: block;
                 display: -webkit-box;
                 max-height: 4.26em;
-                -o-text-overflow: ellipsis;
                 text-overflow: ellipsis;
                 line-height: 1.42em;
                 -webkit-line-clamp: 3;
@@ -1009,7 +1021,20 @@
                 white-space: normal;
                 margin-bottom: 16px;
                 letter-spacing: 0;
+                @include tablet{
+                    font-size: 2rem;
+                    line-height: 2.8rem;
+                }
+                @include mobile{
+                    font-size: 14px;
+                    margin-bottom: 12px;
+                    line-height: 2.7rem;
+                }
             }
+        }
+    }
+    .tag-wrap {
+        @include mobile{
         }
     }
 }
@@ -1025,6 +1050,8 @@
         border: 1px solid rgba(0, 0, 0, 0.1);
         background-color: rgba(255, 255, 255, 0.3);
         transition: background-color 0.3s;
+
+ 
 
         &:hover {
             border-color: rgba(0, 0, 0, 0.1);
@@ -1047,6 +1074,13 @@
         position: relative;
         margin: 0 auto;
         padding: 120px 0 100px;
+        @include tablet{
+            padding-top: 56px;
+            padding-bottom: 80px;
+        }
+        @include mobile {
+            padding: 56px 0 60px;
+        }
     }
 
     .text-wrap {
@@ -1064,7 +1098,10 @@
 
         @include tablet{
             padding: 0 120px;
-            // top: calc(50% - 23px);
+        }
+        @include mobile {
+            padding: 0 24px;
+            top: 50%;
         }
 
         span {
@@ -1075,6 +1112,9 @@
             @include tablet{
                 font-size: 24px;
             }
+            @include mobile{
+                font-size: 18px;
+            }
         }
 
         em {
@@ -1082,9 +1122,14 @@
             font-size: 48px;
             line-height: 1.41;
             font-weight: 700;
+
             @include tablet{
                 margin-top: 4px;
                 font-size: 34px;
+            }
+            @include mobile{
+                font-size: 24px;
+                margin-top: 7px;
             }
         }
     }
@@ -1097,6 +1142,10 @@
         @include tablet{
             height: 300px;
         }
+        @include mobile{
+            height: auto;
+            aspect-ratio: 3/2;
+        }
     }
 
     .link-wrap {
@@ -1107,8 +1156,13 @@
 .sc-search {
     .search-inner {
         padding-bottom: 60px;
-        // margin-bottom: 60px;
         margin: 0 auto 60px;
+        @include tablet{
+            margin-bottom: 40px;
+            padding-bottom: 40px;
+        }
+
+        @include mobile{}
     }
 
     .title-wrap {
@@ -1165,6 +1219,7 @@
         line-height: 38px;
         font-weight: 700;
         font-size: 1.6rem;
+        z-index: 2;
 
         &:focus {
             outline: none;
@@ -1176,6 +1231,9 @@
             &~.search-list {
                 display: block;
             }
+        }
+        &::placeholder {
+            color: #999;
         }
     }
 
@@ -1192,12 +1250,22 @@
         overflow: hidden;
         z-index: 1;
 
+        @include tablet{
+            padding-bottom: 8px;
+        }
+        
         span {
             font-weight: 700;
             padding: 8px 0;
             font-size: 1.6rem;
             line-height: 24px;
             display: block;
+
+            @include tablet{
+                line-height: 20px;
+                font-size: 1.4rem;
+                padding: 4px 0;
+            }
         }
 
         .search-item {
@@ -1206,6 +1274,12 @@
             line-height: 24px;
             padding: 8px 0;
 
+            @include tablet{
+                line-height: 20px;
+                font-size: 1.2rem;
+                padding: 4px 0;
+            }
+            @include mobile{}
         }
     }
 

@@ -172,17 +172,19 @@ $(function () {
 
 
     function responsiveSwiper() {
-        if (width >= 1024) {
-            // 슬라이드 효과
+        if (width >=1024) {
             initSwiper('fade', 0, 'auto');
             initSwiper2('auto', 88)
             initSwiper3(a2)
-        } else if (width < 1024) {
-            // 페이드 효과
+        } else if (width < 768){
             initSwiper('slide', 16, 1.03);
             initSwiper2(1, 24)
             initSwiper3(a3)
-        }
+        } else if (width < 1024) {
+            initSwiper('slide', 16, 1.03);
+            initSwiper2(1, 24)
+            initSwiper3(a2)
+        } 
 
     }
 
@@ -422,7 +424,9 @@ $(function () {
         let template = '';
         template += `<div class="quick-wrap">
             <h3 class="title-box">${el.name}</h3>
-            ${innerTemplate}
+                <div class="quick-inner-wrap">
+                ${innerTemplate}
+                </div>
             </div>
             `;
 
@@ -478,6 +482,37 @@ $(function () {
         keyword = $(this).text();
         $('.sc-search input').val(keyword);
     })
+    
 
+    // 푸터 모바일 연결 사이트 아코디언 메뉴 열고닫기
+    $('.footer .quick-wrap').click(function () {
+        $(this).toggleClass('on')
+        $(this).siblings().removeClass('on')
+    })
+
+    //모바일 햄버거메뉴
+    $('.btn-menu').click(function () {
+        $('.mob-menu').addClass('on')
+        $('body').addClass('hidden')
+    })
+
+    $('.mob-menu .btn-close').click(function () {
+        $('.mob-menu').removeClass('on')
+        $('body').removeClass('hidden')
+    })
+
+    $('.mob-menu .link-hover').click(function () {
+        $('.mob-menu .sub-wrap').toggleClass('on')
+        $(this).toggleClass('on')
+        $(this).parent().toggleClass('on')
+        $(this).parents().find('.sub-wrap').not($(this).siblings('.sub-wrap')).removeClass('on')
+        $(this).parents().find('.gnb-item').not($(this).parent()).removeClass('on')
+    })
+
+    $('.mob-menu .link-menu').click(function () {
+        $('.mob-menu .depth3-wrap').toggleClass('on')
+        $(this).toggleClass('on')
+        $(this).parents().find('.depth3-wrap').not($(this).siblings('.depth3-wrap')).removeClass('on')
+    })
 
 })
