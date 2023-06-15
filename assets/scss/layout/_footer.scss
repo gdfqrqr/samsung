@@ -1,100 +1,109 @@
-.footer{
-    .inner{
+.footer {
+    .inner {
         background-color: #ffffff;
         color: #555555;
         margin: 0 auto;
         padding: 0px 24px 16px;
         max-width: 1440px;
-        @include mobile{
+
+        @include mobile {
             // padding: 0;
         }
 
     }
-    .grid-inner{
+
+    .grid-inner {
         border-top: 1px solid #eee;
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-end;
         padding-top: 12px;
-        
+
         @include tablet {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);  
+            grid-template-columns: repeat(4, 1fr);
         }
-        @include mobile{
+
+        @include mobile {
             display: flex;
             flex-direction: column;
             padding-top: 0;
         }
     }
 
-    .quick-inner-wrap{
-        @include mobile{
-        padding: 0 36px 11px 45px;
-        display: none;
+    .quick-inner-wrap {
+        @include mobile {
+            padding: 0 36px 11px 45px;
+            display: none;
 
         }
     }
-    .quick-wrap{
+
+    .quick-wrap {
         flex: 1;
 
-         &:nth-child(n+5){
-            @include tablet{
+        &:nth-child(n+5) {
+            @include tablet {
                 margin-top: 32px;
             }
-            @include mobile{
+
+            @include mobile {
                 margin-top: 0;
             }
         }
 
-        &.on .quick-inner-wrap{
+        &.on .quick-inner-wrap {
             display: block;
         }
 
-        &.on .title-box::after{
+        &.on .title-box::after {
             transform: rotate(180deg);
         }
 
-        &:last-child{
+        &:last-child {
             margin-top: 30px;
             display: flex;
             flex-direction: column;
             align-items: flex-end;
             flex: 1 0 100%;
 
-            @include tablet{
-                display: block; 
+            @include tablet {
+                display: block;
                 margin-top: 32px;
                 flex: 1;
             }
-            @include mobile{
+
+            @include mobile {
                 margin-top: 0;
             }
 
-            & > * {
+            &>* {
                 width: 16.6%;
-                @include tablet{
+
+                @include tablet {
                     width: initial;
                 }
             }
-           
+
         }
-        .title-box{
+
+        .title-box {
             font-size: 1.4rem;
             line-height: 1.43;
             font-weight: 700;
             color: #555555;
             margin-bottom: 8px;
             position: relative;
-            
-            @include mobile{
+
+            @include mobile {
                 // padding: 0 36px 0 24px;
                 height: 60px;
                 font-size: 1.6rem;
                 margin: 0;
                 display: flex;
                 align-items: center;
-                &::after{
+
+                &::after {
                     content: '';
                     position: absolute;
                     top: 50%;
@@ -107,13 +116,13 @@
             }
         }
 
-        .quick-item{
+        .quick-item {
             font-size: 1.2rem;
             line-height: 1.33;
             color: #555555;
             margin-bottom: 4px;
 
-            @include mobile{
+            @include mobile {
                 font-size: 14px;
                 line-height: 1.43;
                 height: 41px;
@@ -121,10 +130,11 @@
                 align-items: center;
             }
 
-            a{
+            a {
                 display: flex;
             }
-            img{
+
+            img {
                 width: 10px;
                 height: 10px;
                 margin-left: 3px;
@@ -132,107 +142,120 @@
         }
     }
 
-    .btm-wrap{
+    .btm-wrap {
         padding-top: 12px;
         margin-top: 32px;
         border-top: 1px solid rgba(0, 0, 0, 0.1);
         display: flex;
         justify-content: space-between;
 
-        @include tablet{
+        @include tablet {
             flex-direction: column;
             padding-top: 24px;
         }
-        @include mobile{
+
+        @include mobile {
             // margin: 28px 24px 0 24px;
             align-items: center;
         }
 
-        .left-wrap{
+        .left-wrap {
             display: flex;
             align-items: center;
-            @include mobile{
+
+            @include mobile {
                 flex-wrap: wrap;
                 width: 260px;
             }
 
-            .btn-box{
+            .btn-box {
                 display: flex;
                 gap: 5px;
-                @include mobile{
+
+                @include mobile {
                     order: 2;
                     flex: 1 0 100%;
                     margin: 24px 0;
                 }
             }
-            @include tablet{
+
+            @include tablet {
                 order: 2;
                 flex-wrap: wrap;
                 margin-top: 40px;
             }
-            .privacy-list{
+
+            .privacy-list {
                 display: flex;
                 margin-left: 60px;
                 gap: 28px;
-                @include mobile{
+
+                @include mobile {
                     order: 1;
                     margin-left: 0;
                     gap: 16px;
                 }
             }
-            .privacy-item{
+
+            .privacy-item {
                 font-size: 10px;
                 font-weight: 700;
                 line-height: 1.3;
                 color: #555;
-                @include tablet{
+
+                @include tablet {
                     font-size: 12px;
                     line-height: 1.33;
                 }
             }
         }
-        address{
+
+        address {
             margin-left: 28px;
             font-size: 10px;
             line-height: 1.3;
 
-            @include tablet{
+            @include tablet {
                 flex: 1 1 100%;
+
                 margin : {
                     left: 0;
                     top: 18px;
                 }
 
-                @include mobile{
+                @include mobile {
                     order: 3;
                     text-align: center;
                     margin: 0;
                 }
             }
         }
-        .right-wrap{
-            @include tablet{
+
+        .right-wrap {
+            @include tablet {
                 order: 1;
             }
-            .channel-list{
+
+            .channel-list {
                 display: flex;
                 align-items: center;
-         
-                @include mobile{
+
+                @include mobile {
                     flex-wrap: wrap;
                     justify-content: center;
                 }
 
-                &+.channel-list{
+                &+.channel-list {
                     margin-top: 12px;
-                    @include mobile{
+
+                    @include mobile {
                         margin-top: 24px;
                     }
 
-                    strong{
+                    strong {
                         display: none;
 
-                        @include mobile{
+                        @include mobile {
                             display: flex;
                             width: 100%;
                             margin: 24px auto 0;
@@ -245,19 +268,21 @@
                     }
                 }
 
-                .title{
+                .title {
                     width: 54px;
                     font-size: 1rem;
                     line-height: 1.3;
                     font-weight: 700;
                     color: #555555;
                     margin-right: 12px;
-                    @include tablet{
+
+                    @include tablet {
                         width: 80px;
                         margin-right: 20px;
                         font-size: 1.5rem;
                     }
-                    @include mobile{
+
+                    @include mobile {
                         flex: 1 0 100%;
                         text-align: center;
                         margin-bottom: 16px;
@@ -266,28 +291,34 @@
                     }
                 }
             }
-            .channel-item{
-                &+.channel-item{
+
+            .channel-item {
+                &+.channel-item {
                     margin-left: 12px;
-               
+
                 }
-                img{
+
+                img {
                     width: 24px;
                     height: 24px;
-                    @include tablet{
+
+                    @include tablet {
                         width: 40px;
                         height: 40px;
                     }
                 }
             }
-            strong{    
+
+            strong {
                 margin-left: 20px;
                 width: 44px;
                 height: 32px;
-                @include tablet{
+
+                @include tablet {
                     margin-left: auto;
                 }
-                @include mobile{
+
+                @include mobile {
                     display: none;
                 }
             }

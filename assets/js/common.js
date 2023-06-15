@@ -14,16 +14,16 @@ $(function () {
 
     // 메인비주얼
     var menu = ['SFF & SAFE™ Forum 2023', '희망별숲', '아이소셀 포토부스', '비전', 'PIM']
-    
+
 
     a2 = function (index, className) { //작동되게
-        return '<div class="' + className + '">' + '<p>' + (menu[index]) + '<span></span>' +'</p>' + '</div>' ;
+        return '<div class="' + className + '">' + '<p>' + (menu[index]) + '<span></span>' + '</p>' + '</div>';
     }
     a3 = function (index, className) { //작동안되게
-        return '<div class="' + className + '"></div>' ;
+        return '<div class="' + className + '"></div>';
     }
 
-    function initSwiper3(bullet){
+    function initSwiper3(bullet) {
         return swiper1 = new Swiper(".sc-visual .swiper", {
             effect: 'fade',
             navigation: {
@@ -120,37 +120,36 @@ $(function () {
 
 
     // main silde3 -> sc-insight
-    // var tab = ['초고화소 이미지센서', '초미세 픽셀 기술', '게이밍 스토리지', '오토모티브', '인공지능', 'EUV']
+    var tab = ['초고화소 이미지센서', '초미세 픽셀 기술', '게이밍 스토리지', '오토모티브', '인공지능', 'EUV']
 
     let width = window.innerWidth; //내현재 윈도우창위드
-    let swiperInsight; //재할당가능한변수선언문
+    let swiper; //재할당가능한변수선언문
     let mainswiper; //재할당가능한변수선언문
 
     responsiveSwiper();
 
     function initSwiper(effect, space, view, touch) {
-        if (typeof (swiperInsight) == 'object') swiperInsight.destroy(); // 기존 스와이퍼 죽임 후  밑에서 재실행
+        if (typeof (swiper) == 'object') swiper.destroy(); // 기존 스와이퍼 죽임 후  밑에서 재실행
 
 
-        return swiperInsight = new Swiper(".sc-insight .swiper", {
+        return swiper = new Swiper(".sc-insight .swiper", {
             effect: effect,
             slidesPerView: view,
             centeredSlides: true,
             spaceBetween: space,
-            // pagination: {
-            //     el: ".sc-insight .tab-list",
-            //     clickable: true,
-            //     renderBullet: function (index, className) {
-            //         return '<div class="' + className + '">' + (tab[index]) + '</div>';
-            //     },
-            // },
-       
-            touchRatio: touch
+            pagination: {
+                el: ".sc-insight .tab-list",
+                clickable: true,
+                renderBullet: function (index, className) {
+                    return '<div class="' + className + '">' + (tab[index]) + '</div>';
+                },
+            },
+            touchRatio: touch,
         });
 
     }
 
-    function initSwiper2(num,between) {
+    function initSwiper2(num, between) {
         if (typeof (mainswiper) == 'object') mainswiper.destroy(); // 기존 스와이퍼 죽이고 재실행 
 
         //main silde2 -> sc-info
@@ -172,11 +171,11 @@ $(function () {
 
 
     function responsiveSwiper() {
-        if (width >=1024) {
+        if (width >= 1024) {
             initSwiper('fade', 0, 'auto', 0);
             initSwiper2('auto', 88)
             initSwiper3(a2)
-        } else if (width < 768){
+        } else if (width < 768) {
             initSwiper('slide', 16, 1.03, 1);
             initSwiper2(1, 24)
             initSwiper3(a3)
@@ -184,7 +183,7 @@ $(function () {
             initSwiper('slide', 16, 1.03, 1);
             initSwiper2(1, 24)
             initSwiper3(a2)
-        } 
+        }
 
     }
 
@@ -193,21 +192,6 @@ $(function () {
         responsiveSwiper();
     });
 
-    var swiperNav = new Swiper(".swiper-nav", {
-        slidesPerView: 'auto',
-    });
-
-    $('.swiper-nav a').click(function (e) {
-        e.preventDefault()
-    })
-
-    // $('.swiper-nav .swiper-slide').click(function () {
-    //     $(this).addClass('swiper-slide-active')
-    //     $(this).siblings().removeClass('swiper-slide-active')
-    // })
-    
-    // swiperInsight.controller.control = swiperNav;
-    // swiperNav.controller.control = swiperInsight;
 
     //aos
     AOS.init();
@@ -484,8 +468,8 @@ $(function () {
 
     $('.search-popup input').click(function () {
         $('.search-popup .search-list').show()
-        
-        if($('.search-popup .search-list').css('display') == 'block'){
+
+        if ($('.search-popup .search-list').css('display') == 'block') {
             $('.search-popup .tag-wrap').hide()
         }
     })
@@ -507,7 +491,7 @@ $(function () {
         keyword = $(this).text();
         $('.sc-search input').val(keyword);
     })
-    
+
 
     // 푸터 모바일 연결 사이트 아코디언 메뉴 열고닫기
     $('.footer .quick-wrap').click(function () {

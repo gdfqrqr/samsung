@@ -1,32 +1,67 @@
-body{
+body {
     overflow-x: hidden;
 }
 
-@include tablet{
-    .hidden{
+@include tablet {
+    .hidden {
         overflow: hidden;
     }
 }
 
-.hidden2{
+.hidden2 {
     overflow: hidden;
 }
-.blind { position: absolute; clip: rect(0 0 0 0); width: 1px; height: 1px; margin: -1px; overflow: hidden; } 
- 
-.fixed-wrap{
+
+#skip-nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin-left: 0;
+    z-index: 99999;
+    color: #fff;
+
+    a {
+        color: inherit;
+        position: absolute;
+        transform: translate(-100%, -100%);
+        display: block;
+        width: 100%;
+        text-align: center;
+        font-size: 1.4em;
+        background-color: #000;
+
+        &:focus {
+            width: 100%;
+            padding: 10px;
+            transform: none;
+        }
+    }
+}
+
+.blind {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
+
+.fixed-wrap {
     position: fixed;
     bottom: 24px;
     right: 24px;
     opacity: 0;
     visibility: hidden;
     z-index: 10;
-    
-    &.active{
+
+    &.active {
         opacity: 1;
         visibility: visible;
     }
-    
-    a{
+
+    a {
         display: flex;
         justify-content: center;
         align-items: center;

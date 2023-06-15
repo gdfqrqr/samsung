@@ -13,6 +13,15 @@
 </head>
 
 <body>
+    <div id="skip-nav">
+        <a href="#main">본문으로 이동</a>
+        <a href="#info">인포로 이동</a>
+        <a href="#insight">인사이트로 이동</a>
+        <a href="#product">주요제품으로 이동</a>
+        <a href="#news">뉴스로 이동</a>
+        <a href="#recruit">채용으로 이동</a>
+        <a href="#search">검색으로 이동</a>
+    </div>
     <header class="header">
         <div class="header-inner">
             <h1 class="logo">
@@ -883,7 +892,7 @@
             <div class="btn-wrap"><button class="btn-close"></button></div>
         </div>
     </header>
-    <main>
+    <main id="main">
         <section class="sc-visual">
             <h2 class="blind">메인비주얼</h2>
             <div class="swiper">
@@ -1009,7 +1018,7 @@
                 <button class="btn btn-next" aria-label="슬라이드 다음 버튼"><img src="./assets/img/btn-prev.svg" alt></button>
             </div>
         </section>
-        <section class="sc-info">
+        <section id="info" class="sc-info">
             <h2 class="title-wrap">모두를 위한 지속 가능성</h2>
             <div class="swiper-container">
                 <div class="btn-wrap">
@@ -1120,21 +1129,13 @@
 
             </div>
         </section>
-        <section class="sc-insight">
+        <section id="insight" class="sc-insight">
             <div class="insight-inner" data-aos="fade-up" data-aos-duration="1000">
                 <h2 class="title-wrap">인사이트</h2>
                 <div class="insight-wrapper">
-                    <!-- <ul class="tab-list"> -->
-                        <!-- <li class="tab-item on"><a href="">초고화소 이미지 센서</a></li> -->
-                    <!-- </ul> -->
-                    <div class="swiper-nav">
-                        <ul class="tab-list swiper-wrapper">
-                            <li class="swiper-slide tab-item"><a href="">초고화소 이미지센서</a></li>
-                            <li class="swiper-slide tab-item"><a href="">초미세 픽셀 기술</a></li>
-                            <li class="swiper-slide tab-item"><a href="">게이밍 스토리지</a></li>
-                            <li class="swiper-slide tab-item"><a href="">오토모티브</a></li>
-                            <li class="swiper-slide tab-item"><a href="">인공지능</a></li>
-                            <li class="swiper-slide tab-item"><a href="">EUV</a></li>
+                    <div class="tab-wrap">
+                        <ul class="tab-list">
+                            <!-- <li class="tab-item on"><a href="">초고화소 이미지 센서</a></li> -->
                         </ul>
                     </div>
                     <div class="swiper">
@@ -1151,10 +1152,13 @@
                                     </picture>
                                 </figure>
                                 <div class="text-wrap">
-                                    <strong>초고화소 이미지센서</strong>
-                                    <em>더 많은 픽셀로.<br>이제 에픽 디테일.</em>
-                                    <span>픽셀 수는 디테일이 선명한 사진과 어떤 관련이 있을까요? 그리고 2억 화소를 “에픽 해상도” 라고 부르는 이유는 무엇일까요? 점점 더 많은
-                                        스마트폰 카메라들이 초고화소 센서를 탑재하는 이유를 살펴보세요</span>
+                                    <h3>초고화소 이미지센서</h3>
+                                    <!--제목-->
+                                    <strong>더 많은 픽셀로.<br>이제 에픽 디테일.</strong>
+                                    <!--강조-->
+                                    <p>픽셀 수는 디테일이 선명한 사진과 어떤 관련이 있을까요? 그리고 2억 화소를 “에픽 해상도” 라고 부르는 이유는 무엇일까요? 점점 더 많은
+                                        스마트폰 카메라들이 초고화소 센서를 탑재하는 이유를 살펴보세요</p>
+                                    <!--긴텍스트-->
                                     <div class="link-wrap">
                                         <a href="" class="link-apply">더 알아보기</a>
                                     </div>
@@ -1172,10 +1176,10 @@
                                     </picture>
                                 </figure>
                                 <div class="text-wrap">
-                                    <strong>초미세 픽셀 기술</strong>
-                                    <em>더 많은 픽셀,<br>더 많은 디테일.</em>
-                                    <span>삼성전자는 모바일에서 압도적인 디테일의 초고화소 이미지를 제공하기 위해 업계 최소 크기인 0.56μm 카메라 픽셀을 개발했습니다. 아이소셀이
-                                        픽셀 기술을 어떻게 발전시켜왔는지 확인해보세요.</span>
+                                    <h3>초고화소 이미지센서</h3>
+                                    <strong>더 많은 픽셀로.<br>이제 에픽 디테일.</strong>
+                                    <p>픽셀 수는 디테일이 선명한 사진과 어떤 관련이 있을까요? 그리고 2억 화소를 “에픽 해상도” 라고 부르는 이유는 무엇일까요? 점점 더 많은
+                                        스마트폰 카메라들이 초고화소 센서를 탑재하는 이유를 살펴보세요</p>
                                     <div class="link-wrap">
                                         <a href="" class="link-apply">더 알아보기</a>
                                     </div>
@@ -1193,10 +1197,10 @@
                                     </picture>
                                 </figure>
                                 <div class="text-wrap">
-                                    <strong>초고화소 이미지센서</strong>
-                                    <em>더 많은 픽셀로.<br>이제 에픽 디테일.</em>
-                                    <span>픽셀 수는 디테일이 선명한 사진과 어떤 관련이 있을까요? 그리고 2억 화소를 “에픽 해상도” 라고 부르는 이유는 무엇일까요? 점점 더 많은
-                                        스마트폰 카메라들이 초고화소 센서를 탑재하는 이유를 살펴보세요</span>
+                                    <h3>초고화소 이미지센서</h3>
+                                    <strong>더 많은 픽셀로.<br>이제 에픽 디테일.</strong>
+                                    <p>픽셀 수는 디테일이 선명한 사진과 어떤 관련이 있을까요? 그리고 2억 화소를 “에픽 해상도” 라고 부르는 이유는 무엇일까요? 점점 더 많은
+                                        스마트폰 카메라들이 초고화소 센서를 탑재하는 이유를 살펴보세요</p>
                                     <div class="link-wrap">
                                         <a href="" class="link-apply">더 알아보기</a>
                                     </div>
@@ -1214,10 +1218,10 @@
                                     </picture>
                                 </figure>
                                 <div class="text-wrap">
-                                    <strong>초고화소 이미지센서</strong>
-                                    <em>더 많은 픽셀로.<br>이제 에픽 디테일.</em>
-                                    <span>픽셀 수는 디테일이 선명한 사진과 어떤 관련이 있을까요? 그리고 2억 화소를 “에픽 해상도” 라고 부르는 이유는 무엇일까요? 점점 더 많은
-                                        스마트폰 카메라들이 초고화소 센서를 탑재하는 이유를 살펴보세요</span>
+                                    <h3>초고화소 이미지센서</h3>
+                                    <strong>더 많은 픽셀로.<br>이제 에픽 디테일.</strong>
+                                    <p>픽셀 수는 디테일이 선명한 사진과 어떤 관련이 있을까요? 그리고 2억 화소를 “에픽 해상도” 라고 부르는 이유는 무엇일까요? 점점 더 많은
+                                        스마트폰 카메라들이 초고화소 센서를 탑재하는 이유를 살펴보세요</p>
                                     <div class="link-wrap">
                                         <a href="" class="link-apply">더 알아보기</a>
                                     </div>
@@ -1235,10 +1239,10 @@
                                     </picture>
                                 </figure>
                                 <div class="text-wrap">
-                                    <strong>초고화소 이미지센서</strong>
-                                    <em>더 많은 픽셀로.<br>이제 에픽 디테일.</em>
-                                    <span>픽셀 수는 디테일이 선명한 사진과 어떤 관련이 있을까요? 그리고 2억 화소를 “에픽 해상도” 라고 부르는 이유는 무엇일까요? 점점 더 많은
-                                        스마트폰 카메라들이 초고화소 센서를 탑재하는 이유를 살펴보세요</span>
+                                    <h3>초고화소 이미지센서</h3>
+                                    <strong>더 많은 픽셀로.<br>이제 에픽 디테일.</strong>
+                                    <p>픽셀 수는 디테일이 선명한 사진과 어떤 관련이 있을까요? 그리고 2억 화소를 “에픽 해상도” 라고 부르는 이유는 무엇일까요? 점점 더 많은
+                                        스마트폰 카메라들이 초고화소 센서를 탑재하는 이유를 살펴보세요</p>
                                     <div class="link-wrap">
                                         <a href="" class="link-apply">더 알아보기</a>
                                     </div>
@@ -1256,10 +1260,10 @@
                                     </picture>
                                 </figure>
                                 <div class="text-wrap">
-                                    <strong>초고화소 이미지센서</strong>
-                                    <em>더 많은 픽셀로.<br>이제 에픽 디테일.</em>
-                                    <span>픽셀 수는 디테일이 선명한 사진과 어떤 관련이 있을까요? 그리고 2억 화소를 “에픽 해상도” 라고 부르는 이유는 무엇일까요? 점점 더 많은
-                                        스마트폰 카메라들이 초고화소 센서를 탑재하는 이유를 살펴보세요</span>
+                                    <h3>초고화소 이미지센서</h3>
+                                    <strong>더 많은 픽셀로.<br>이제 에픽 디테일.</strong>
+                                    <p>픽셀 수는 디테일이 선명한 사진과 어떤 관련이 있을까요? 그리고 2억 화소를 “에픽 해상도” 라고 부르는 이유는 무엇일까요? 점점 더 많은
+                                        스마트폰 카메라들이 초고화소 센서를 탑재하는 이유를 살펴보세요</p>
                                     <div class="link-wrap">
                                         <a href="" class="link-apply">더 알아보기</a>
                                     </div>
@@ -1270,12 +1274,12 @@
                 </div>
             </div>
         </section>
-        <section class="sc-prod">
+        <section id="product" class="sc-prod">
             <div class="prod-inner">
                 <ul class="prod-list">
                     <li class="prod-item" data-aos="fade-up">
                         <div class="title-wrap">
-                            <h3>주요 제품</h3>
+                            <h2>주요 제품</h2>
                         </div>
                     </li>
                     <li class="prod-item" data-aos="fade-up">
@@ -1292,7 +1296,7 @@
                             </figure>
                             <div class="text-wrap">
                                 <strong>PM9C1a</strong>
-                                <em>다양한 활용이 돋보이는 PC용 스토리지</em>
+                                <p>다양한 활용이 돋보이는 PC용 스토리지</p>
                             </div>
                         </a>
                     </li>
@@ -1310,7 +1314,7 @@
                             </figure>
                             <div class="text-wrap">
                                 <strong>LPDDR5X</strong>
-                                <em>또 업그레이드된<br>차세대 저전력 DRAM</em>
+                                <p>또 업그레이드된<br>차세대 저전력 DRAM</p>
                             </div>
                         </a>
                     </li>
@@ -1328,7 +1332,7 @@
                             </figure>
                             <div class="text-wrap">
                                 <strong>MicroSD PRO Endurance</strong>
-                                <em>반복적으로 읽고 쓸 수 있는 메모리 카드</em>
+                                <p>반복적으로 읽고 쓸 수 있는 메모리 카드</p>
                             </div>
                         </a>
                     </li>
@@ -1346,7 +1350,7 @@
                             </figure>
                             <div class="text-wrap">
                                 <strong>엑시노스 1380</strong>
-                                <em>파워<br>이제 프로처럼</em>
+                                <p>파워<br>이제 프로처럼</p>
                             </div>
                         </a>
                     </li>
@@ -1364,24 +1368,25 @@
                             </figure>
                             <div class="text-wrap">
                                 <strong>아이소셀 HP3</strong>
-                                <em>경이로운 해상도로<br>프로 너머로</em>
+                                <p>경이로운 해상도로<br>프로 너머로</p>
                             </div>
                         </a>
                     </li>
                 </ul>
             </div>
         </section>
-        <section class="sc-news">
-            <h2 class="blind">최신 뉴스</h2>
+        <section id="news" class="sc-news">
             <div class="news-inner">
                 <div class="title-wrap" data-aos="fade-up" data-aos-duration="500">
-                    <h3>최신 뉴스 및 인사이트</h3>
+                    <h2>최신 뉴스 및 인사이트</h2>
                 </div>
-                <ul class="link-list">
-                    <li class="link-item" data-aos="fade-up" data-aos-duration="500"><a href="">뉴스</a></li>
-                    <li class="link-item" data-aos="fade-up" data-aos-duration="700"><a href="">이벤트</a></li>
-                    <li class="link-item" data-aos="fade-up" data-aos-duration="900"><a href="">테크 블로그</a></li>
-                </ul>
+                <nav>
+                    <ul class="link-list">
+                        <li class="link-item" data-aos="fade-up" data-aos-duration="500"><a href="">뉴스</a></li>
+                        <li class="link-item" data-aos="fade-up" data-aos-duration="700"><a href="">이벤트</a></li>
+                        <li class="link-item" data-aos="fade-up" data-aos-duration="900"><a href="">테크 블로그</a></li>
+                    </ul>
+                </nav>
                 <div class="news-wrapper">
                     <ul class="news-list">
                         <li class="item-sizer"></li>
@@ -1391,6 +1396,7 @@
                                 <div class="img-wrap"><img src="./assets/img/news-01.jpeg" alt></div>
                                 <div class="text-wrap">
                                     <em>뉴스</em>
+                                    <!--em사용 - 중복되는 카테고리-->
                                     <strong>삼성전자, 업계 최선단 12나노급 D랩 양산</strong>
                                 </div>
                             </a>
@@ -1404,7 +1410,7 @@
                             <a href="">
                                 <div class="img-wrap"><img src="./assets/img/news-02.jpeg" alt></div>
                                 <div class="text-wrap">
-                                    <span>뉴스</span>
+                                    <em>뉴스</em>
                                     <strong>글로벌 반도체 기업들이 이스라엘에 모였다! ChipEx 2023에서 파운드리 비전 제시한 삼성전자</strong>
                                 </div>
                             </a>
@@ -1418,7 +1424,7 @@
                             <a href="">
                                 <div class="img-wrap"><img src="./assets/img/news-04.jpeg" alt></div>
                                 <div class="text-wrap">
-                                    <span>테크 블로그</span>
+                                    <em>테크 블로그</em>
                                     <strong>삼성전자 메모리는 어떻게 AI 혁명을 이끌어 가고 있는가</strong>
                                 </div>
                             </a>
@@ -1433,7 +1439,7 @@
                             <a href="">
                                 <div class="img-wrap"><img src="./assets/img/news-06.jpeg" alt></div>
                                 <div class="text-wrap">
-                                    <span>뉴스</span>
+                                    <em>뉴스</em>
                                     <strong>삼성전자 반도체, 'SEMI SMC Korea 2023'에서 지속 가능한 생태계 구축을 위한 소재기술의 새로운 관점을
                                         제시하다</strong>
                                 </div>
@@ -1449,7 +1455,7 @@
                             <a href="">
                                 <div class="img-wrap"><img src="./assets/img/news-05.jpeg" alt></div>
                                 <div class="text-wrap">
-                                    <span>테크 블로그</span>
+                                    <em>테크 블로그</em>
                                     <strong>삼성전자 지문인증IC: 새로운 결제 경험을 위한 생체인증카드용 올인원 솔루션</strong>
                                 </div>
                             </a>
@@ -1464,7 +1470,7 @@
                             <a href="">
                                 <div class="img-wrap"><img src="./assets/img/news-03.jpeg" alt></div>
                                 <div class="text-wrap">
-                                    <span>뉴스</span>
+                                    <em>뉴스</em>
                                     <strong>삼성전자, 업계 최초 'CXL 2.0 D램' 개발</strong>
                                 </div>
                             </a>
@@ -1479,8 +1485,7 @@
                 </div>
             </div>
         </section>
-        <section class="sc-recruit">
-            <h2 class="blind">채용</h2>
+        <section id="recruit" class="sc-recruit">
             <div class="recruit-inner">
                 <figure>
                     <picture>
@@ -1492,63 +1497,64 @@
                     </picture>
                 </figure>
                 <div class="text-wrap">
-                    <span>채용</span>
-                    <em>함께 지식을 쌓고<br>성장합니다.</em>
+                    <h2>채용</h2>
+                    <strong>함께 지식을 쌓고<br>성장합니다.</strong>
                     <div class="link-wrap">
                         <a href="" class="link-apply">더 알아보기</a>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="sc-search">
-            <h2 class="blind">검색</h2>
+        <section id="search" class="sc-search">
             <div class="search-inner">
                 <div class="title-wrap">
-                    <h3>어떤 것을 찾고 계신가요?</h3>
+                    <h2>어떤 것을 찾고 계신가요?</h2>
                 </div>
-                <form action="">
-                    <fieldset>
-                        <legend class="blind">검색창</legend>
-                        <div class="input-wrap">
-                            <input type="text" placeholder="검색">
-                            <button class="btn-search">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                    <g fill="none" fill-rule="evenodd">
-                                        <g fill="#a2a2a2" fill-rule="nonzero">
-                                            <g>
+                <div class="search-area">
+                    <form action="">
+                        <fieldset>
+                            <legend class="blind">검색창</legend>
+                            <div class="input-wrap">
+                                <input type="text" placeholder="검색">
+                                <button class="btn-search" aria-label="검색 버튼">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                        <g fill="none" fill-rule="evenodd">
+                                            <g fill="#a2a2a2" fill-rule="nonzero">
                                                 <g>
                                                     <g>
-                                                        <path
-                                                            d="M10.145 1.023c5.032 0 9.125 4.093 9.125 9.125 0 2.147-.745 4.123-1.99 5.683l5.7 5.737-1.42 1.41-5.69-5.729c-1.567 1.265-3.56 2.024-5.725 2.024-5.031 0-9.125-4.094-9.125-9.125 0-5.032 4.094-9.125 9.125-9.125zm0 2c-3.928 0-7.125 3.196-7.125 7.125 0 3.928 3.197 7.125 7.125 7.125 3.93 0 7.125-3.197 7.125-7.125 0-3.93-3.196-7.125-7.125-7.125z"
-                                                            transform="translate(-402.000000, -1069.000000) translate(320.000000, 986.000000) translate(58.000000, 67.000000) translate(24.000000, 16.000000)" />
+                                                        <g>
+                                                            <path
+                                                                d="M10.145 1.023c5.032 0 9.125 4.093 9.125 9.125 0 2.147-.745 4.123-1.99 5.683l5.7 5.737-1.42 1.41-5.69-5.729c-1.567 1.265-3.56 2.024-5.725 2.024-5.031 0-9.125-4.094-9.125-9.125 0-5.032 4.094-9.125 9.125-9.125zm0 2c-3.928 0-7.125 3.196-7.125 7.125 0 3.928 3.197 7.125 7.125 7.125 3.93 0 7.125-3.197 7.125-7.125 0-3.93-3.196-7.125-7.125-7.125z"
+                                                                transform="translate(-402.000000, -1069.000000) translate(320.000000, 986.000000) translate(58.000000, 67.000000) translate(24.000000, 16.000000)" />
+                                                        </g>
                                                     </g>
                                                 </g>
                                             </g>
                                         </g>
-                                    </g>
-                                </svg>
-                            </button>
-                            <ul class="search-list">
-                                <span>추천검색</span>
-                                <li class="search-item"><a href="">d램이란</a></li>
-                                <li class="search-item"><a href="">차량</a></li>
-                                <li class="search-item"><a href="">window pc 와 연결</a></li>
-                            </ul>
-                        </div>
-                        <div class="tag-wrap">
-                            <a href=""><span>DRAM</span></a>
-                            <a href=""><span>DDR5</span></a>
-                            <a href=""><span>12나노 D램</span></a>
-                            <a href=""><span>12나노 D램</span></a>
-                        </div>
-                    </fieldset>
-                </form>
+                                    </svg>
+                                </button>
+                                <ul class="search-list">
+                                    <span>추천검색</span>
+                                    <li class="search-item"><a href="">d램이란</a></li>
+                                    <li class="search-item"><a href="">차량</a></li>
+                                    <li class="search-item"><a href="">window pc 와 연결</a></li>
+                                </ul>
+                            </div>
+                            <div class="tag-wrap">
+                                <a href=""><span>DRAM</span></a>
+                                <a href=""><span>DDR5</span></a>
+                                <a href=""><span>12나노 D램</span></a>
+                                <a href=""><span>12나노 D램</span></a>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
             </div>
         </section>
     </main>
     <footer class="footer">
         <div class="inner">
-            <div class="grid-inner">
+            <nav class="grid-inner">
                 <!--<div class="quick-wrap">
                     <h3 class="title-box">제품</h3>
                     <ul class="quick-list">
@@ -1557,12 +1563,14 @@
                         <li class="quick-item"><a href="">DRAM</a></li>
                     </ul>
                 </div> -->
-            </div>
+            </nav>
             <div class="btm-wrap">
                 <div class="left-wrap">
                     <div class="btn-box">
-                        <button class="btn-img"><img src="./assets/img/footerImg-01.svg" alt></button>
-                        <button class="btn-img"><img src="./assets/img/footerImg-02.svg" alt></button>
+                        <button class="btn-img" aria-label="access black"><img src="./assets/img/footerImg-01.svg"
+                                alt></button>
+                        <button class="btn-img" aria-label="access white"><img src="./assets/img/footerImg-02.svg"
+                                alt></button>
                     </div>
                     <ul class="privacy-list">
                         <li class="privacy-item"><a href="">개인정보보호</a></li>
@@ -1575,21 +1583,26 @@
                 </div>
                 <div class="right-wrap">
                     <ul class="channel-list">
-                        <span class="title">공식 채널</span>
-                        <li class="channel-item"><a href=""><img src="./assets/img/sns-01.svg" alt></a></li>
-                        <li class="channel-item"><a href=""><img src="./assets/img/sns-02.svg" alt></a></li>
-                        <li class="channel-item"><a href=""><img src="./assets/img/sns-03.svg" alt></a></li>
-                        <li class="channel-item"><a href=""><img src="./assets/img/sns-04.svg" alt></a></li>
-                        <li class="channel-item"><a href=""><img src="./assets/img/sns-05.svg" alt></a></li>
-                        <strong><img src="./assets/img/web-accessibility-mark.avif" alt></strong>
+                        <em class="title">공식 채널</em>
+                        <li class="channel-item"><a href=""><img src="./assets/img/sns-01.svg" alt="공식채널 인스타그램"></a>
+                        </li>
+                        <li class="channel-item"><a href=""><img src="./assets/img/sns-02.svg" alt="공식채널 트위터"></a></li>
+                        <li class="channel-item"><a href=""><img src="./assets/img/sns-03.svg" alt="공식채널 페이스북"></a></li>
+                        <li class="channel-item"><a href=""><img src="./assets/img/sns-04.svg" alt="공식채널 링크드인"></a></li>
+                        <li class="channel-item"><a href=""><img src="./assets/img/sns-05.svg" alt="공식채널 유투브"></a></li>
+                        <strong><img src="./assets/img/web-accessibility-mark.avif" alt="웹접근성우수사이트인증마크"></strong>
                     </ul>
                     <ul class="channel-list">
-                        <span class="title">반도체 뉴스룸</span>
-                        <li class="channel-item"><a href=""><img src="./assets/img/sns-06.svg" alt></a></li>
-                        <li class="channel-item"><a href=""><img src="./assets/img/sns-03.svg" alt></a></li>
-                        <li class="channel-item"><a href=""><img src="./assets/img/sns-05.svg" alt></a></li>
-                        <li class="channel-item"><a href=""><img src="./assets/img/sns-01.svg" alt></a></li>
-                        <strong><img src="./assets/img/web-accessibility-mark.avif" alt></strong>
+                        <em class="title">반도체 뉴스룸</em>
+                        <li class="channel-item"><a href=""><img src="./assets/img/sns-06.svg" alt="반도체 뉴스룸 새창열림"></a>
+                        </li>
+                        <li class="channel-item"><a href=""><img src="./assets/img/sns-03.svg" alt="반도체 뉴스룸 페이스북"></a>
+                        </li>
+                        <li class="channel-item"><a href=""><img src="./assets/img/sns-05.svg" alt="반도체 뉴스룸 유투브"></a>
+                        </li>
+                        <li class="channel-item"><a href=""><img src="./assets/img/sns-01.svg" alt="반도체 뉴스룸 인스타그램"></a>
+                        </li>
+                        <strong><img src="./assets/img/web-accessibility-mark.avif" alt="웹접근성우수사이트인증마크"></strong>
                     </ul>
                 </div>
             </div>
@@ -1597,7 +1610,7 @@
     </footer>
     <div class="fixed-wrap">
         <a href="">
-            <img src="./assets/img/top.svg" alt>
+            <img src="./assets/img/top.svg" alt="최상단으로이동">
         </a>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
