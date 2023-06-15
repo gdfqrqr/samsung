@@ -12,7 +12,8 @@
             display: flex;
             flex-wrap: nowrap;
             justify-content: center;
-            @include mobile{
+
+            @include mobile {
                 align-items: flex-end;
             }
         }
@@ -104,7 +105,8 @@
 
             &-active {
                 color: #fff;
-                @include mobile{
+
+                @include mobile {
                     opacity: 1;
                 }
 
@@ -278,7 +280,8 @@
         color: #fff;
         padding: 0 5.5px 2px;
         border-bottom: 2px solid #fff;
-        @include mobile{
+
+        @include mobile {
             order: 2;
         }
     }
@@ -304,7 +307,8 @@
 
 .sc-info {
     padding-bottom: 80px;
-    @include mobile{
+
+    @include mobile {
         padding-bottom: 60px;
     }
 
@@ -313,7 +317,8 @@
         font-weight: 700;
         padding: 120px 0 80px;
         text-align: center;
-        @include mobile{
+
+        @include mobile {
             padding: 60px 0 48px;
             font-size: 2.4rem;
         }
@@ -333,13 +338,14 @@
         box-sizing: content-box;
         padding: 0 32px;
 
-        @include tablet{
+        @include tablet {
             padding: 0 24px;
         }
 
         img {
             padding-bottom: 40px;
-            @include mobile{
+
+            @include mobile {
                 width: 100%;
             }
         }
@@ -360,18 +366,19 @@
         opacity: 0;
         transition: opacity 0.2s 0.2s;
 
-        @include tablet{
+        @include tablet {
             opacity: 1;
         }
 
-        @include mobile{
+        @include mobile {
             flex-direction: column;
         }
     }
 
     .text-wrap {
         width: 50%;
-        @include mobile{
+
+        @include mobile {
             width: 100%;
         }
 
@@ -384,10 +391,10 @@
                 font-size: 1.5rem;
             }
 
-            @include mobile{
+            @include mobile {
                 font-size: 1.4rem;
             }
-    
+
         }
 
         .text-box.main {
@@ -401,7 +408,7 @@
                 padding-top: 12px;
             }
 
-            @include mobile{
+            @include mobile {
                 padding-top: 8px;
                 font-size: 2.4rem;
             }
@@ -415,17 +422,19 @@
         flex-direction: column;
         align-items: flex-start;
 
-        @include mobile{
+        @include mobile {
             width: 100%;
-            padding:20px 0 0 0;
+            padding: 20px 0 0 0;
         }
 
         p {
             font-size: 1.8rem;
+
             @include tablet {
                 font-size: 1.5rem;
             }
-            @include mobile{
+
+            @include mobile {
                 font-size: 1.4rem;
             }
         }
@@ -478,6 +487,7 @@
     .pagination {
         text-align: center;
         margin-top: 48px;
+
         @include tablet {
             margin-top: 32px;
         }
@@ -498,10 +508,11 @@
     margin-bottom: 60px;
     padding-bottom: 140px;
 
-    @include tablet{
+    @include tablet {
         padding-bottom: 120px;
     }
-    @include mobile{
+
+    @include mobile {
         padding-bottom: 100px;
         padding-top: 80px;
         margin-bottom: 0;
@@ -510,15 +521,16 @@
     .insight-inner {
         margin: 0 auto;
         padding: 0 32px;
-        @include mobile{
+
+        @include mobile {
             padding: 0 24px;
         }
     }
 
-    .insight-wrapper{
+    .insight-wrapper {
         // max-width: 1156px;
         width: 100%;
-        
+
     }
 
     .title-wrap {
@@ -528,12 +540,14 @@
         padding-bottom: 48px;
         text-align: center;
         color: #fff;
-        @include tablet{
+
+        @include tablet {
             font-size: 2.8rem;
             line-height: 1.39;
             padding-bottom: 40px;
         }
-        @include mobile{
+
+        @include mobile {
             padding-bottom: 32px;
             font-size: 2.4rem;
             line-height: 1.42;
@@ -547,17 +561,27 @@
         display: flex;
         justify-content: center;
         gap: 49px;
-        @include tablet{
+
+        @include tablet {
             gap: 41px;
         }
-        @include mobile{
+
+        @include mobile {
             gap: 31px;
             margin-bottom: 24px;
-            overflow-x: auto;
-            width: calc(100% + 48px);
+            // overflow-x: auto;
+            // width: calc(100% + 48px);
+            // -ms-overflow-style: none;
+            /* IE and Edge */
+            // scrollbar-width: none;
+            /* Firefox */
+
+            // &::-webkit-scrollbar {
+            //     display: none;
+            // }
         }
 
-        .swiper-pagination-bullet {
+        .tab-item {
             position: relative;
             font-size: 1.6rem;
             font-weight: 700;
@@ -569,43 +593,51 @@
             background-color: unset;
             border-radius: unset;
             opacity: 1;
-            
-            @include tablet{
-                font-size: 14px;    
+            display: block;
+
+            @include tablet {
+                font-size: 14px;
             }
 
             &:hover {
                 color: #fff;
             }
 
-            &+.swiper-pagination-bullet::before {
+            &+.tab-item::before {
                 content: '';
                 display: inline-block;
                 position: absolute;
                 width: 1px;
                 height: 20px;
                 top: 50%;
-                margin-left: -28px;
+                margin-left: -25px;
                 transform: translateY(-50%);
                 background: #757575;
-                @include tablet{
+
+                @include tablet {
                     height: 16px;
-                    margin-left: -20px;
+                    margin-left: -16px;
                 }
             }
 
-            &::after {
-                content: '';
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                width: 0;
-                height: 2px;
-                background: #fff;
-                transition: width .2s;
-            }
+            a {
+                position: relative;
 
-            &-active {
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    width: 0;
+                    height: 2px;
+                    background: #fff;
+                    transition: width .2s;
+                }
+            }
+        }
+
+        .swiper-slide-active {
+            a {
                 color: #fff;
 
                 &::after {
@@ -615,19 +647,23 @@
         }
 
     }
+
     .swiper {
         overflow: initial;
 
     }
-    .swiper-wrapper{
-        @include mobile{
-            margin-left: -24px;
+
+    .swiper-wrapper {
+        @include mobile {
+            // margin-left: -24px;
         }
     }
+
     .swiper-slide {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        @include mobile{
+
+        @include mobile {
             display: flex;
             flex-direction: column;
         }
@@ -639,7 +675,8 @@
                 min-width: 340px;
                 min-height: 340px;
             }
-            @include mobile{
+
+            @include mobile {
                 border-radius: 20px;
                 min-width: 312px;
                 min-height: 156px;
@@ -658,7 +695,8 @@
             @include tablet {
                 margin-left: 24px;
             }
-            @include mobile{
+
+            @include mobile {
                 margin-left: 0;
                 margin-top: 24px;
             }
@@ -698,6 +736,7 @@
                     font-size: 3.4rem;
                     margin-bottom: 24px;
                 }
+
                 @include mobile {
                     font-size: 2.4rem;
                     line-height: 1.42;
@@ -721,7 +760,8 @@
                     margin-bottom: 32px;
                     max-width: 332px;
                 }
-                @include mobile{
+
+                @include mobile {
                     font-weight: normal;
                     font-size: 1.4rem;
                     line-height: 1.43;
@@ -782,7 +822,8 @@
             margin-top: 12px;
             font-weight: 700;
             font-size: 54px;
-            @include mobile{
+
+            @include mobile {
                 font-size: 28px;
                 text-align: center;
             }
@@ -793,7 +834,8 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 24px;
-        @include mobile{
+
+        @include mobile {
             display: flex;
             flex-direction: column;
             gap: 0;
@@ -807,8 +849,9 @@
             &.black .text-wrap {
                 color: #000;
             }
-            @include mobile{
-                &:nth-child(n+2){
+
+            @include mobile {
+                &:nth-child(n+2) {
                     margin-bottom: 20px;
                 }
             }
@@ -818,7 +861,8 @@
             display: flex;
             align-items: center;
             height: 100%;
-            @include mobile{
+
+            @include mobile {
                 justify-content: center;
                 margin-bottom: 40px;
             }
@@ -862,11 +906,12 @@
 
 .sc-news {
     padding-top: 120px;
+
     @include tablet {
         padding-top: 60px;
     }
 
-    @include mobile{
+    @include mobile {
         padding-top: 80px;
     }
 
@@ -883,9 +928,11 @@
             font-size: 54px;
             line-height: 1.33;
             text-align: center;
+
             @include tablet {
                 font-size: 42px;
             }
+
             @include mobile {
                 font-size: 28px;
                 line-height: 1.32;
@@ -898,6 +945,7 @@
         display: flex;
         justify-content: center;
         gap: 12px;
+
         @include mobile {
             margin: 32px 0 56px;
         }
@@ -930,11 +978,11 @@
         max-width: 1155px;
         margin: 0 auto;
 
-        @include tablet{
+        @include tablet {
             padding: 0 32px;
         }
 
-        @include mobile{
+        @include mobile {
             padding: 0 24px;
         }
 
@@ -949,10 +997,11 @@
         .item-sizer {
             width: calc((100% - 40px)/3);
 
-            @include tablet{
+            @include tablet {
                 width: calc((100% - 20px)/2);
             }
-            @include mobile{
+
+            @include mobile {
                 width: 100%;
             }
         }
@@ -967,10 +1016,11 @@
             margin-bottom: 64px;
             padding: 0 32px;
 
-            @include tablet{
+            @include tablet {
                 width: calc((100% - 20px)/2);
             }
-            @include mobile{
+
+            @include mobile {
                 width: 100%;
                 padding: 0 16px;
                 margin-bottom: 48px;
@@ -989,13 +1039,16 @@
             border-radius: 20px;
             margin: 0 -32px 24px -32px;
             overflow: hidden;
-            @include tablet{
+
+            @include tablet {
                 margin: 0 -28px 24px;
             }
-            @include mobile{
+
+            @include mobile {
                 margin: 0 -16px 18px;
             }
-            img{
+
+            img {
                 width: 100%;
             }
         }
@@ -1032,11 +1085,13 @@
                 white-space: normal;
                 margin-bottom: 16px;
                 letter-spacing: 0;
-                @include tablet{
+
+                @include tablet {
                     font-size: 2rem;
                     line-height: 2.8rem;
                 }
-                @include mobile{
+
+                @include mobile {
                     font-size: 14px;
                     margin-bottom: 12px;
                     line-height: 2.7rem;
@@ -1044,9 +1099,9 @@
             }
         }
     }
+
     .tag-wrap {
-        @include mobile{
-        }
+        @include mobile {}
     }
 }
 
@@ -1062,7 +1117,7 @@
         background-color: rgba(255, 255, 255, 0.3);
         transition: background-color 0.3s;
 
- 
+
 
         &:hover {
             border-color: rgba(0, 0, 0, 0.1);
@@ -1085,10 +1140,12 @@
         position: relative;
         margin: 0 auto;
         padding: 120px 0 100px;
-        @include tablet{
+
+        @include tablet {
             padding-top: 56px;
             padding-bottom: 80px;
         }
+
         @include mobile {
             padding: 56px 0 60px;
         }
@@ -1107,9 +1164,10 @@
         flex-direction: column;
         align-items: flex-start;
 
-        @include tablet{
+        @include tablet {
             padding: 0 120px;
         }
+
         @include mobile {
             padding: 0 24px;
             top: 50%;
@@ -1120,10 +1178,12 @@
             line-height: 1.4;
             font-weight: 700;
             display: block;
-            @include tablet{
+
+            @include tablet {
                 font-size: 24px;
             }
-            @include mobile{
+
+            @include mobile {
                 font-size: 18px;
             }
         }
@@ -1134,11 +1194,12 @@
             line-height: 1.41;
             font-weight: 700;
 
-            @include tablet{
+            @include tablet {
                 margin-top: 4px;
                 font-size: 34px;
             }
-            @include mobile{
+
+            @include mobile {
                 font-size: 24px;
                 margin-top: 7px;
             }
@@ -1150,10 +1211,12 @@
         height: 380px;
         max-height: 570px;
         object-fit: cover;
-        @include tablet{
+
+        @include tablet {
             height: 300px;
         }
-        @include mobile{
+
+        @include mobile {
             height: auto;
             aspect-ratio: 3/2;
         }
@@ -1168,12 +1231,13 @@
     .search-inner {
         padding-bottom: 60px;
         margin: 0 auto 60px;
-        @include tablet{
+
+        @include tablet {
             margin-bottom: 40px;
             padding-bottom: 40px;
         }
 
-        @include mobile{}
+        @include mobile {}
     }
 
     .title-wrap {
@@ -1195,6 +1259,9 @@
             margin: 0 auto;
             position: relative;
             border: 0;
+            @include mobile{
+                width: auto;
+            }
         }
     }
 
@@ -1243,6 +1310,7 @@
                 display: block;
             }
         }
+
         &::placeholder {
             color: #999;
         }
@@ -1261,10 +1329,10 @@
         overflow: hidden;
         z-index: 1;
 
-        @include tablet{
+        @include tablet {
             padding-bottom: 8px;
         }
-        
+
         span {
             font-weight: 700;
             padding: 8px 0;
@@ -1272,7 +1340,7 @@
             line-height: 24px;
             display: block;
 
-            @include tablet{
+            @include tablet {
                 line-height: 20px;
                 font-size: 1.4rem;
                 padding: 4px 0;
@@ -1285,12 +1353,13 @@
             line-height: 24px;
             padding: 8px 0;
 
-            @include tablet{
+            @include tablet {
                 line-height: 20px;
                 font-size: 1.2rem;
                 padding: 4px 0;
             }
-            @include mobile{}
+
+            @include mobile {}
         }
     }
 

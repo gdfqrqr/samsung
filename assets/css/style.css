@@ -413,7 +413,7 @@ body {
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
   }
-  .header .sub-inner ::-webkit-scrollbar {
+  .header .sub-inner::-webkit-scrollbar {
     display: none;
   }
 }
@@ -2046,11 +2046,11 @@ body {
   .sc-insight .tab-list {
     gap: 31px;
     margin-bottom: 24px;
-    overflow-x: auto;
-    width: calc(100% + 48px);
+    /* IE and Edge */
+    /* Firefox */
   }
 }
-.sc-insight .tab-list .swiper-pagination-bullet {
+.sc-insight .tab-list .tab-item {
   position: relative;
   font-size: 1.6rem;
   font-weight: 700;
@@ -2062,37 +2062,41 @@ body {
   background-color: unset;
   border-radius: unset;
   opacity: 1;
+  display: block;
 }
 @media (max-width: 1023px) {
-  .sc-insight .tab-list .swiper-pagination-bullet {
+  .sc-insight .tab-list .tab-item {
     font-size: 14px;
   }
 }
-.sc-insight .tab-list .swiper-pagination-bullet:hover {
+.sc-insight .tab-list .tab-item:hover {
   color: #fff;
 }
-.sc-insight .tab-list .swiper-pagination-bullet + .swiper-pagination-bullet::before {
+.sc-insight .tab-list .tab-item + .tab-item::before {
   content: "";
   display: inline-block;
   position: absolute;
   width: 1px;
   height: 20px;
   top: 50%;
-  margin-left: -28px;
+  margin-left: -25px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   background: #757575;
 }
 @media (max-width: 1023px) {
-  .sc-insight .tab-list .swiper-pagination-bullet + .swiper-pagination-bullet::before {
+  .sc-insight .tab-list .tab-item + .tab-item::before {
     height: 16px;
-    margin-left: -20px;
+    margin-left: -16px;
   }
 }
-.sc-insight .tab-list .swiper-pagination-bullet::after {
+.sc-insight .tab-list .tab-item a {
+  position: relative;
+}
+.sc-insight .tab-list .tab-item a::after {
   content: "";
   position: absolute;
-  bottom: 0;
+  top: 100%;
   left: 0;
   width: 0;
   height: 2px;
@@ -2100,19 +2104,14 @@ body {
   -webkit-transition: width 0.2s;
   transition: width 0.2s;
 }
-.sc-insight .tab-list .swiper-pagination-bullet-active {
+.sc-insight .tab-list .swiper-slide-active a {
   color: #fff;
 }
-.sc-insight .tab-list .swiper-pagination-bullet-active::after {
+.sc-insight .tab-list .swiper-slide-active a::after {
   width: 100%;
 }
 .sc-insight .swiper {
   overflow: initial;
-}
-@media (max-width: 767px) {
-  .sc-insight .swiper-wrapper {
-    margin-left: -24px;
-  }
 }
 .sc-insight .swiper-slide {
   display: grid;
@@ -2725,6 +2724,11 @@ body {
   margin: 0 auto;
   position: relative;
   border: 0;
+}
+@media (max-width: 767px) {
+  .sc-search form fieldset {
+    width: auto;
+  }
 }
 .sc-search .input-wrap {
   display: -webkit-box;
