@@ -162,7 +162,7 @@ body {
 .header.fix {
   position: fixed;
   top: 0;
-  z-index: 10;
+  z-index: 11;
 }
 .header.hide {
   -webkit-transform: translateY(-100%);
@@ -516,6 +516,11 @@ body {
   color: #757575;
   font-weight: normal;
   display: inline-block;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.header .depth3-wrap .depth3-item > a:hover {
+  color: #ddd;
 }
 .header .depth3-wrap .depth3-item.depth1 {
   position: relative;
@@ -565,6 +570,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   margin-left: 13px;
+  height: 100%;
 }
 .header .utils-wrap .btn-lang img {
   width: 18px;
@@ -737,6 +743,11 @@ body {
     width: 496px;
   }
 }
+@media (max-width: 767px) {
+  .search-popup fieldset {
+    width: auto;
+  }
+}
 .search-popup .input-wrap {
   position: relative;
   width: 100%;
@@ -806,15 +817,26 @@ body {
 .search-popup .input-wrap input:focus ~ .btn-search path {
   fill: #000;
 }
-.search-popup .input-wrap input:focus ~ .search-list {
-  display: block;
-}
 .search-popup .tag-wrap {
   margin-top: 28px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 12px;
 }
 @media (max-width: 1023px) {
   .search-popup .tag-wrap {
     margin-top: 16px;
+  }
+}
+@media (max-width: 767px) {
+  .search-popup .tag-wrap {
+    padding: 0 45px;
   }
 }
 .search-popup .tag-wrap a {
@@ -1884,16 +1906,16 @@ body {
     padding: 20px 0 0 0;
   }
 }
-.sc-info .desc-wrap span {
+.sc-info .desc-wrap p {
   font-size: 1.8rem;
 }
 @media (max-width: 1023px) {
-  .sc-info .desc-wrap span {
+  .sc-info .desc-wrap p {
     font-size: 1.5rem;
   }
 }
 @media (max-width: 767px) {
-  .sc-info .desc-wrap span {
+  .sc-info .desc-wrap p {
     font-size: 1.4rem;
   }
 }
@@ -2024,6 +2046,8 @@ body {
   .sc-insight .tab-list {
     gap: 31px;
     margin-bottom: 24px;
+    overflow-x: auto;
+    width: calc(100% + 48px);
   }
 }
 .sc-insight .tab-list .swiper-pagination-bullet {
@@ -2085,6 +2109,11 @@ body {
 .sc-insight .swiper {
   overflow: initial;
 }
+@media (max-width: 767px) {
+  .sc-insight .swiper-wrapper {
+    margin-left: -24px;
+  }
+}
 .sc-insight .swiper-slide {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -2110,6 +2139,9 @@ body {
 }
 @media (max-width: 767px) {
   .sc-insight .swiper-slide img {
+    border-radius: 20px;
+    min-width: 312px;
+    min-height: 156px;
     width: 100%;
   }
 }

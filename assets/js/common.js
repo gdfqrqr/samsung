@@ -464,8 +464,18 @@ $(function () {
 
     $('.search-popup .link-wrap').click(function (e) {
         e.preventdefault()
-        $('.search-popup .search-list').style.display = 'none';
+        $('.search-popup .search-list').hide()
     })
+
+    $('.search-popup input').click(function () {
+        $('.search-popup .search-list').show()
+        
+        if($('.search-popup .search-list').css('display') == 'block'){
+            $('.search-popup .tag-wrap').hide()
+        }
+    })
+
+
 
     //언어선택 팝업
     $('.btn-lang').click(function () {

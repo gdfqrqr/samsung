@@ -8,7 +8,7 @@
     &.fix{
         position: fixed;
         top: 0;
-        z-index: 10;
+        z-index: 11;
     }
     &.hide{
         transform: translateY(-100%);
@@ -352,6 +352,10 @@
                 color: #757575;
                 font-weight: normal;
                 display: inline-block;
+                transition: .3s;
+                &:hover{
+                    color: #ddd;
+                }
             }
 
             &.depth1 {
@@ -401,6 +405,7 @@
             display: flex;
             align-items: center;
             margin-left: 13px;
+            height: 100%;
 
             img {
                 width: 18px;
@@ -552,6 +557,9 @@
         @include tablet{
             width: 496px;
         }
+        @include mobile{
+            width: auto;
+        }
     }
     .input-wrap{
         position: relative;
@@ -614,18 +622,25 @@
                 & ~ .btn-search path{
                     fill: #000;
                 }
-                & ~ .search-list{
-                    display: block;
-                }
+                // & ~ .search-list{
+                //     display: block;
+                // }
             }
         }
     }
 
     .tag-wrap{
         margin-top: 28px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
 
         @include tablet{
             margin-top: 16px;
+        }
+        @include mobile{
+            padding: 0 45px;
         }
 
         a{
@@ -827,6 +842,7 @@
                     min-height: 41px;
                     line-height: 1.33;
                     font-size: 1.4rem;
+                  
                 }
             }
         }

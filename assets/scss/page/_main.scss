@@ -420,7 +420,7 @@
             padding:20px 0 0 0;
         }
 
-        span {
+        p {
             font-size: 1.8rem;
             @include tablet {
                 font-size: 1.5rem;
@@ -553,6 +553,8 @@
         @include mobile{
             gap: 31px;
             margin-bottom: 24px;
+            overflow-x: auto;
+            width: calc(100% + 48px);
         }
 
         .swiper-pagination-bullet {
@@ -615,6 +617,12 @@
     }
     .swiper {
         overflow: initial;
+
+    }
+    .swiper-wrapper{
+        @include mobile{
+            margin-left: -24px;
+        }
     }
     .swiper-slide {
         display: grid;
@@ -632,6 +640,9 @@
                 min-height: 340px;
             }
             @include mobile{
+                border-radius: 20px;
+                min-width: 312px;
+                min-height: 156px;
                 width: 100%;
             }
         }
