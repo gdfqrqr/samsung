@@ -517,6 +517,8 @@
             padding: 112px 24px 0;
             margin-left: auto;
             margin-right: auto;
+            max-width: 512px;
+            min-width: 312px;
         }
     }
 
@@ -591,15 +593,11 @@
     .input-wrap {
         position: relative;
         width: 100%;
-        padding-right: 52px;
-        padding-left: 60px;
         background-color: #ffffff;
         border-radius: 28px;
 
         @include tablet {
             border-radius: 20px;
-            padding-left: 40px;
-            padding-right: 44px;
         }
 
         .btn-search {
@@ -633,14 +631,16 @@
             line-height: 56px;
             font-size: 1.8rem;
             line-height: 1.41;
-            font-weight: 400;
             font-weight: 700;
             color: #000;
             opacity: 0.6;
+            padding-right: 52px;
+            padding-left: 60px;
 
             @include tablet {
                 height: 38px;
                 font-size: 1.6rem;
+                padding: 0 40px;
             }
 
             @include mobile {
@@ -649,14 +649,9 @@
 
             &:focus {
                 outline: 0;
-
                 &~.btn-search path {
                     fill: #000;
                 }
-
-                // & ~ .search-list{
-                //     display: block;
-                // }
             }
         }
     }
@@ -707,24 +702,45 @@
 
     .search-list {
         display: none;
-
-        span {
+    .list-inner{
+        padding-right: 52px;
+        padding-left: 60px;
+        @include tablet{
+            padding: 0 40px;
+            margin-top: 8px;
+        }
+        @include mobile{}
+    }
+        em {
             font-size: 1.8rem;
             line-height: 1.33;
             font-weight: 700;
             padding: 16px 0;
             display: block;
+            @include tablet{
+                font-size: 1.4rem;
+                line-height: 1.43;
+                padding: 4px 0;
+            }
+            @include mobile{
+
+            }
         }
 
         .link-wrap {
             border-top: 1px solid #ddd;
             text-align: right;
-            width: calc(100% + 112px);
+            width: 100%;
             position: relative;
-            left: -60px;
             display: flex;
             align-items: center;
             justify-content: flex-end;
+            flex-direction: row;
+
+            @include tablet {
+            }
+            @include mobile {}
+
         }
 
         .link-close {
@@ -733,6 +749,13 @@
             font-size: 1.4rem;
             height: 44px;
             padding-right: 16px;
+
+            @include tablet{
+                height: 40px;
+                font-size: 1.2rem;
+            }
+
+            @include mobile{}
 
             img {
                 margin-left: 4px;
@@ -745,6 +768,16 @@
     .search-item {
         font-size: 16px;
         padding: 16px 0;
+        @include tablet{
+            font-size: 1.4rem;
+            line-height: 1.43;
+            padding: 4px 0;
+        }
+        @include mobile{
+            // font-size: 1.4rem;
+            // line-height: 1.43;
+            // padding: 4px 0;
+        }
     }
 }
 

@@ -8,10 +8,6 @@ window.onload = function () {
 
 $(function () {
 
-
-
-
-
     // 메인비주얼
     var menu = ['SFF & SAFE™ Forum 2023', '희망별숲', '아이소셀 포토부스', '비전', 'PIM']
 
@@ -36,10 +32,10 @@ $(function () {
                 renderBullet: bullet
             },
             loop: true,
-            // autoplay: {
-            //     delay: 5000,
-            //     disableOnInteraction: false
-            // },
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false
+            },
 
         });
     }
