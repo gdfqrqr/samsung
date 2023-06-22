@@ -36,7 +36,6 @@ $(function () {
                 delay: 5000,
                 disableOnInteraction: false
             },
-
         });
     }
 
@@ -142,7 +141,6 @@ $(function () {
             },
             touchRatio: touch,
         });
-
     }
 
     function initSwiper2(num, between) {
@@ -180,7 +178,6 @@ $(function () {
             initSwiper2(1, 24)
             initSwiper3(a2)
         }
-
     }
 
     window.addEventListener('resize', function () {
@@ -188,6 +185,10 @@ $(function () {
         responsiveSwiper();
     });
 
+    window.addEventListener("orientationchange", (event) => {
+        width = window.innerWidth;
+        responsiveSwiper();
+      }); 
 
     //aos
     AOS.init();
