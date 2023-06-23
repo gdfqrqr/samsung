@@ -953,16 +953,16 @@
             }
         }
 
-        .item-sizer {
-            width: calc((100% - 40px)/3);
+        // .item-sizer {
+        //     width: calc((100% - 40px)/3);
 
-            @include tablet{
-                width: calc((100% - 20px)/2);
-            }
-            @include mobile{
-                width: 100%;
-            }
-        }
+        //     @include tablet{
+        //         width: calc((100% - 20px)/2);
+        //     }
+        //     @include mobile{
+        //         width: 100%;
+        //     }
+        // }
 
         .gutter-sizer {
             width: 20px;
@@ -982,14 +982,7 @@
                 padding: 0 16px;
                 margin-bottom: 48px;
             }
-
         }
-
-        // .news-item {
-        //     margin-bottom: 64px;
-        //     padding: 0 32px;
-
-        // }
 
         .img-wrap {
             position: relative;
