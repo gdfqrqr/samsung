@@ -2105,6 +2105,7 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   gap: 49px;
+  color: #fff;
 }
 @media (max-width: 1023px) {
   .sc-insight .tab-list {
@@ -2120,28 +2121,45 @@ body {
     width: max-content;
   }
 }
-.sc-insight .tab-list .swiper-pagination-bullet {
+.sc-insight .tab-list .swiper-slide {
+  width: auto;
+}
+.sc-insight .tab-list .tab-item {
   position: relative;
   font-size: 1.6rem;
   font-weight: 700;
   line-height: 1.44;
   letter-spacing: 0.2px;
   color: #757575;
-  width: unset;
   height: unset;
   background-color: unset;
   border-radius: unset;
   opacity: 1;
 }
 @media (max-width: 1023px) {
-  .sc-insight .tab-list .swiper-pagination-bullet {
+  .sc-insight .tab-list .tab-item {
     font-size: 14px;
   }
 }
-.sc-insight .tab-list .swiper-pagination-bullet:hover {
-  color: #fff;
+.sc-insight .tab-list .tab-item::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #fff;
+  -webkit-transition: width 0.2s;
+  transition: width 0.2s;
 }
-.sc-insight .tab-list .swiper-pagination-bullet + .swiper-pagination-bullet::before {
+.sc-insight .tab-list .tab-item.on {
+  color: #fff;
+  position: relative;
+}
+.sc-insight .tab-list .tab-item.on::after {
+  width: 100%;
+}
+.sc-insight .tab-list .tab-item + .tab-item::before {
   content: "";
   display: inline-block;
   position: absolute;
@@ -2154,35 +2172,14 @@ body {
   background: #757575;
 }
 @media (max-width: 1023px) {
-  .sc-insight .tab-list .swiper-pagination-bullet + .swiper-pagination-bullet::before {
+  .sc-insight .tab-list .tab-item + .tab-item::before {
     height: 16px;
     margin-left: -20px;
   }
 }
-.sc-insight .tab-list .swiper-pagination-bullet::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: #fff;
-  -webkit-transition: width 0.2s;
-  transition: width 0.2s;
-}
-.sc-insight .tab-list .swiper-pagination-bullet-active {
-  color: #fff;
-}
-.sc-insight .tab-list .swiper-pagination-bullet-active::after {
-  width: 100%;
-}
 .sc-insight .swiper {
   overflow: initial;
-}
-@media (max-width: 767px) {
-  .sc-insight .swiper-wrapper {
-    margin-left: -24px;
-  }
+  max-width: 1156px;
 }
 .sc-insight .swiper-slide {
   display: grid;
@@ -2543,19 +2540,6 @@ body {
   display: block;
   clear: both;
   content: "";
-}
-.sc-news .news-wrapper .item-sizer {
-  width: calc((100% - 40px) / 3);
-}
-@media (max-width: 1023px) {
-  .sc-news .news-wrapper .item-sizer {
-    width: calc((100% - 20px) / 2);
-  }
-}
-@media (max-width: 767px) {
-  .sc-news .news-wrapper .item-sizer {
-    width: 100%;
-  }
 }
 .sc-news .news-wrapper .gutter-sizer {
   width: 20px;

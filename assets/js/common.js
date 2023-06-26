@@ -115,7 +115,7 @@ $(function () {
 
 
     // main silde3 -> sc-insight
-    var tab = ['초고화소 이미지센서', '초미세 픽셀 기술', '게이밍 스토리지', '오토모티브', '인공지능', 'EUV']
+    // var tab = ['초고화소 이미지센서', '초미세 픽셀 기술', '게이밍 스토리지', '오토모티브', '인공지능', 'EUV']
 
     let width = window.innerWidth; //내현재 윈도우창위드
     let swiper; //재할당가능한변수선언문
@@ -132,16 +132,38 @@ $(function () {
             slidesPerView: view,
             centeredSlides: true,
             spaceBetween: space,
-            pagination: {
-                el: ".sc-insight .tab-list",
-                clickable: true,
-                renderBullet: function (index, className) {
-                    return '<div class="' + className + '">' + (tab[index]) + '</div>';
-                },
-            },
+            // pagination: {
+            //     el: ".sc-insight .tab-list",
+            //     clickable: true,
+                // renderBullet: function (index, className) {
+                //     return '<div class="' + className + '">' + (tab[index]) + '</div>';
+                // },
+            // },
             touchRatio: touch,
         });
     }
+
+    var tabSwiper = new Swiper(".tab-wrap", {
+        slidesPerView: 'auto',
+        updateOnWindowResize: true,
+        grabCursor: true,
+        centeredSlides: true,
+        centeredSlidesBounds: true,
+        initialSlide: 0,
+        on: {
+            click(event) {
+                console.log('event.target',this.clickedIndex);
+                tabSwiper.slideTo(this.clickedIndex);	
+            },
+          },
+    });
+
+    $('.sc-insight .tab-item').click(function (e) {
+        e.preventDefault();
+        idx = $(this).data('go')
+        $(this).addClass('on').siblings().removeClass('on');
+        swiper.slideToLoop(idx);
+    })
 
     function initSwiper2(num, between) {
         if (typeof (mainswiper) == 'object') mainswiper.destroy(); // 기존 스와이퍼 죽이고 재실행 

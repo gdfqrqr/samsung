@@ -554,6 +554,7 @@
         display: flex;
         justify-content: center;
         gap: 49px;
+        color: #fff;
         @include tablet{
             gap: 41px;
         }
@@ -563,15 +564,18 @@
             width: max-content;
    
         }
+        .swiper-slide{
+            width: auto;
+        }
 
-        .swiper-pagination-bullet {
+        .tab-item {
             position: relative;
             font-size: 1.6rem;
             font-weight: 700;
             line-height: 1.44;
             letter-spacing: 0.2px;
             color: #757575;
-            width: unset;
+            // width: unset;
             height: unset;
             background-color: unset;
             border-radius: unset;
@@ -580,12 +584,26 @@
             @include tablet{
                 font-size: 14px;    
             }
-
-            &:hover {
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 0;
+                height: 2px;
+                background: #fff;
+                transition: width .2s;
+            }
+            &.on {
                 color: #fff;
+                position: relative;
+             
+                &::after {
+                    width: 100%;
+                }
             }
 
-            &+.swiper-pagination-bullet::before {
+            &+.tab-item::before {
                 content: '';
                 display: inline-block;
                 position: absolute;
@@ -601,34 +619,19 @@
                 }
             }
 
-            &::after {
-                content: '';
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                width: 0;
-                height: 2px;
-                background: #fff;
-                transition: width .2s;
-            }
+     
 
-            &-active {
-                color: #fff;
-
-                &::after {
-                    width: 100%;
-                }
-            }
+          
         }
 
     }
     .swiper {
         overflow: initial;
-
+        max-width: 1156px;
     }
+
     .swiper-wrapper{
         @include mobile{
-            margin-left: -24px;
         }
     }
     .swiper-slide {
