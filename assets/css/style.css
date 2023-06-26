@@ -2135,6 +2135,7 @@ body {
   background-color: unset;
   border-radius: unset;
   opacity: 1;
+  display: inline-block;
 }
 @media (max-width: 1023px) {
   .sc-insight .tab-list .tab-item {

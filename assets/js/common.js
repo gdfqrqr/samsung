@@ -147,7 +147,8 @@ $(function () {
         slidesPerView: 'auto',
         updateOnWindowResize: true,
         grabCursor: true,
-        centeredSlides: true,
+        // centeredSlides: true,
+        slidesOffsetAfter: 200,
         centeredSlidesBounds: true,
         initialSlide: 0,
         on: {

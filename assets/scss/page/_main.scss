@@ -580,6 +580,7 @@
             background-color: unset;
             border-radius: unset;
             opacity: 1;
+            display: inline-block;
             
             @include tablet{
                 font-size: 14px;    
