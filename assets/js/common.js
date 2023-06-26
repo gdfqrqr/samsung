@@ -153,7 +153,7 @@ $(function () {
         initialSlide: 0,
         on: {
             click(event) {
-                console.log('event.target',this.clickedIndex);
+                // console.log('event.target',this.clickedIndex);
                 tabSwiper.slideTo(this.clickedIndex);	
             },
           },
