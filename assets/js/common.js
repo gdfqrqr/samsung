@@ -465,10 +465,10 @@ $(function () {
     });
 
     $('.fixed-wrap').click(function (e) {
-        e.preventdefault()
-        $('body,html').scrollTop(0)
+        e.preventDefault();
+        $( 'html, body' ).scrollTop(0);
+        $('.header').removeClass('hide')
     });
-
 
     //검색창 팝업
     $('.utils-wrap .btn-search').click(function () {
