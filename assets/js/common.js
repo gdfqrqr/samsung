@@ -132,32 +132,9 @@ $(function () {
             slidesPerView: view,
             centeredSlides: true,
             spaceBetween: space,
-            // pagination: {
-            //     el: ".sc-insight .tab-list",
-            //     clickable: true,
-                // renderBullet: function (index, className) {
-                //     return '<div class="' + className + '">' + (tab[index]) + '</div>';
-                // },
-            // },
             touchRatio: touch,
         });
     }
-
-    var tabSwiper = new Swiper(".tab-wrap", {
-        slidesPerView: 'auto',
-        updateOnWindowResize: true,
-        grabCursor: true,
-        // centeredSlides: true,
-        slidesOffsetAfter: 200,
-        centeredSlidesBounds: true,
-        initialSlide: 0,
-        on: {
-            click(event) {
-                // console.log('event.target',this.clickedIndex);
-                tabSwiper.slideTo(this.clickedIndex);	
-            },
-          },
-    });
 
     $('.sc-insight .tab-item').click(function (e) {
         e.preventDefault();
@@ -186,20 +163,39 @@ $(function () {
         });
     }
 
+    function initSwiper4(offset) {
+        if (typeof (tabSwiper) == 'object') tabSwiper.destroy();
+        return tabSwiper = new Swiper(".tab-wrap", {
+            slidesPerView: 'auto',
+            updateOnWindowResize: true,
+            grabCursor: true,
+            slidesOffsetAfter: offset,
+            centeredSlidesBounds: true,
+            initialSlide: 0,
+            on: {
+                click(event) {
+                    tabSwiper.slideTo(this.clickedIndex);	
+                },
+            },
+        });
+    }
 
     function responsiveSwiper() {
         if (width >= 1024) {
             initSwiper('fade', 0, 'auto', 0);
             initSwiper2('auto', 88)
             initSwiper3(a2)
+            initSwiper4(0)
         } else if (width < 768) {
             initSwiper('slide', 16, 1.03, 1);
             initSwiper2(1, 24)
             initSwiper3(a3)
+            initSwiper4(200)
         } else if (width < 1024) {
             initSwiper('slide', 16, 1.03, 1);
             initSwiper2(1, 24)
             initSwiper3(a2)
+            initSwiper4(200)
         }
     }
 
